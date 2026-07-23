@@ -1,0 +1,6 @@
+{
+  "name": "Brambatti Distribuidora",
+  "description": "Landing page oficial da Brambatti Distribuidora, distribuidora autorizada Ecosmetics no Rio Grande do Sul. Soluções e produtos profissionais para salões de beleza.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

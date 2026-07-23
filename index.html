@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      (function() {
+        try {
+          var _fetch = window.fetch;
+          Object.defineProperty(window, 'fetch', {
+            get: function() {
+              return _fetch;
+            },
+            set: function(val) {
+              _fetch = val;
+            },
+            configurable: true,
+            enumerable: true
+          });
+        } catch (e) {
+          console.warn('Failed to define fetch setter:', e);
+        }
+      })();
+    </script>
+    <title>Brambatti Distribuidora | Ecosmetics Rio Grande do Sul</title>
+    <meta name="description" content="Distribuidora oficial de produtos de beleza profissionais Ecosmetics no Rio Grande do Sul. Atendimento exclusivo para cabeleireiros e salões de beleza em Caxias do Sul, Porto Alegre e Serra Gaúcha." />
+    <meta name="keywords" content="distribuidora de cosméticos profissionais no Rio Grande do Sul, Ecosmetics RS, Brambatti, salão de beleza, cabeleireiro profissional, Caxias do Sul, Porto Alegre" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-[#E5E0DC] text-[#000000] antialiased">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

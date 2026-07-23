@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-serif: 'Georgia', serif;
+  --font-display: 'Georgia', serif;
+  
+  --color-brand-offwhite: #E5E0DC;
+  --color-brand-warmgray: #615F55;
+  --color-brand-black: #000000;
+  --color-brand-olive: #48523B;
+  --color-brand-olivedark: #30372A;
+}
+
+/* Base custom styles to guarantee professional rendering and reset */
+html {
+  scroll-behavior: smooth;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #E5E0DC;
+  color: #000000;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Elegant scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #E5E0DC;
+}
+::-webkit-scrollbar-thumb {
+  background: #48523B;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #30372A;
+}
+
+/* Custom styles for editorial layout and seamless animations */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 25s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Hide scrollbars for sliders */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
