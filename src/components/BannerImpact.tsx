@@ -5,7 +5,7 @@
 
 import { getWhatsAppLink } from '../data';
 import ScrollFadeIn from './ScrollFadeIn';
-import impactImage from '../assets/images/padrao_ecosmetics.jpg';
+import impactImage from '../assets/images/impact_banner_hair_1784819726608.jpg';
 
 export default function BannerImpact() {
   const handleButtonClick = () => {

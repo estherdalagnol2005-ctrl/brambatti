@@ -5,8 +5,7 @@
 
 import { motion } from 'motion/react';
 import { ArrowRight } from 'lucide-react';
-import heroImage from '../assets/images/hero_image.png';
-import heroImageMobile from '../assets/images/hero_image_mobile.png';
+import heroImage from '../assets/images/hero_salon_hair_1784818831770.jpg';
 
 export default function Hero() {
   const handlePrimaryClick = () => {
@@ -23,7 +22,7 @@ export default function Hero() {
         {/* Imagem Mobile */}
         <img
           id="hero-mobile-img"
-          src={heroImageMobile}
+          src={heroImage}
           alt="Cabelo sedoso e saudável - Brambatti Distribuidora"
           referrerPolicy="no-referrer"
           className="w-full h-full object-cover object-center block lg:hidden"
