@@ -26,7 +26,7 @@ export default function Footer() {
                 src={logoImg}
                 alt="Brambatti Distribuidora"
                 referrerPolicy="no-referrer"
-                className="w-[155px] md:w-[200px] h-auto object-contain block brightness-0 invert opacity-90 group-hover:opacity-100 transition-opacity duration-300"
+                className="h-[46px] w-auto max-w-[46px] object-contain block brightness-0 invert opacity-90 group-hover:opacity-100 transition-opacity duration-300 md:h-[54px] md:max-w-[54px]"
               />
             </a>
             
