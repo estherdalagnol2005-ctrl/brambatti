@@ -6,11 +6,11 @@
 import { ArrowUpRight } from 'lucide-react';
 import { getWhatsAppLink } from '../data';
 import ScrollFadeIn from './ScrollFadeIn';
-import coloracaoImg from '../assets/images/impact_banner_hair_1784819726608.jpg';
-import descoloracaoImg from '../assets/images/hero_salon_hair_1784818831770.jpg';
-import shampoosImg from '../assets/images/ecosmetics_products_1784818846931.jpg';
-import tratamentosImg from '../assets/images/impact_banner_hair_1784819726608.jpg';
-import finalizacaoImg from '../assets/images/hero_salon_hair_1784818831770.jpg';
+import coloracaoImg from '../assets/images/cat_coloracao.jpg';
+import descoloracaoImg from '../assets/images/cat_descoloracao.jpg';
+import shampoosImg from '../assets/images/cat_shampoos.jpg';
+import tratamentosImg from '../assets/images/cat_tratamentos.jpg';
+import finalizacaoImg from '../assets/images/cat_finalizacao.jpg';
 
 interface CategoryItem {
   id: string;

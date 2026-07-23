@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import partnershipLogoImg from '../assets/images/partnership_logo.svg';
+import partnershipLogoImg from '../assets/images/partnership_logo.png';
 import ScrollFadeIn from './ScrollFadeIn';
 
 export default function EcosmeticsPartnership() {

@@ -6,8 +6,8 @@
 import { motion } from 'motion/react';
 import { Sparkles } from 'lucide-react';
 import ScrollFadeIn from './ScrollFadeIn';
-import essencia1Img from '../assets/images/impact_banner_hair_1784819726608.jpg';
-import essencia2Img from '../assets/images/hero_salon_hair_1784818831770.jpg';
+import essencia1Img from '../assets/images/essencia_1.jpg';
+import essencia2Img from '../assets/images/essencia_2.jpg';
 
 export default function About() {
   return (
