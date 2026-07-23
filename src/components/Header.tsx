@@ -61,14 +61,13 @@ export default function Header() {
           <a
             id="header-logo-link"
             href="#inicio"
-            className="group flex items-center focus:outline-none py-0 my-0"
+            className="group flex h-full items-center focus:outline-none py-0 my-0"
           >
             <img
               src={logoImg}
               alt="Brambatti Distribuidora"
               referrerPolicy="no-referrer"
-              className="w-[125px] lg:w-[155px] h-auto object-contain block transition-transform duration-300 group-hover:scale-[1.01] my-0 py-0"
-              style={{ maxHeight: '100%' }}
+              className="h-[30px] w-auto max-w-[30px] object-contain block transition-transform duration-300 group-hover:scale-[1.03] my-0 py-0 lg:h-[34px] lg:max-w-[34px]"
             />
           </a>
 
