@@ -5,8 +5,8 @@
 
 import { motion } from 'motion/react';
 import { ArrowRight } from 'lucide-react';
-import heroImage from '../assets/images/hero_image.png';
-import heroImageMobile from '../assets/images/hero_image_mobile.png';
+import heroDesktop from '../assets/images/hero_desktop.png';
+import heroMobile from '../assets/images/hero_mobile.jpg';
 
 export default function Hero() {
   const handlePrimaryClick = () => {
@@ -23,7 +23,7 @@ export default function Hero() {
         {/* Imagem Mobile */}
         <img
           id="hero-mobile-img"
-          src={heroImageMobile}
+          src={heroMobile}
           alt="Cabelo sedoso e saudável - Brambatti Distribuidora"
           referrerPolicy="no-referrer"
           className="w-full h-full object-cover object-center block lg:hidden"
@@ -31,7 +31,7 @@ export default function Hero() {
         {/* Imagem Desktop */}
         <img
           id="hero-main-img"
-          src={heroImage}
+          src={heroDesktop}
           alt="Cabelo sedoso e saudável - Brambatti Distribuidora"
           referrerPolicy="no-referrer"
           className="w-full h-full object-cover object-left md:object-center hidden lg:block"
