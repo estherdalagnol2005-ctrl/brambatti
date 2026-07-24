@@ -25,6 +25,9 @@ export default function App() {
         {/* Hero Section */}
         <Hero />
 
+        {/* Detailed "About the company" */}
+        <About />
+
         {/* Credibility horizontal band */}
         <Credibility />
 
@@ -39,9 +42,6 @@ export default function App() {
 
         {/* Brambatti key differentials */}
         <Differentials />
-
-        {/* Detailed "About the company" */}
-        <About />
 
         {/* State delivery coverage / regional service viewer */}
         <ServiceArea />
