@@ -26,7 +26,7 @@ export default function EcosmeticsPartnership() {
                 src={partnershipLogoImg} 
                 alt="Brambatti Distribuidora e Ecosmetics Parceria Oficial" 
                 referrerPolicy="no-referrer"
-                className="h-16 sm:h-20 md:h-24 w-auto object-contain opacity-95 hover:opacity-100 transition-opacity duration-300"
+                className="h-10 sm:h-12 md:h-14 w-auto object-contain opacity-95 hover:opacity-100 transition-opacity duration-300"
               />
             </div>
           </div>
@@ -36,3 +36,4 @@ export default function EcosmeticsPartnership() {
     </section>
   );
 }
+
