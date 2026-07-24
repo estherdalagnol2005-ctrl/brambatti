@@ -6,9 +6,6 @@
 import { ArrowRight, MapPin, GraduationCap } from 'lucide-react';
 import { getWhatsAppLink } from '../data';
 import ScrollFadeIn from './ScrollFadeIn';
-import colorCourseImg from '../assets/images/impact_banner_hair_1784819726608.jpg';
-import treatmentCourseImg from '../assets/images/ecosmetics_products_1784818846931.jpg';
-import cuttingCourseImg from '../assets/images/hero_salon_hair_1784818831770.jpg';
 
 interface Course {
   id: string;
@@ -30,7 +27,7 @@ export default function Courses() {
       description: 'Aperfeiçoamento prático em técnicas de mechas, transições de cor e loiros impecáveis utilizando as tecnologias inovadoras da Ecosmetics.',
       city: 'Caxias do Sul - RS',
       slots: 'Vagas Limitadas',
-      image: colorCourseImg,
+      image: 'https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=1200&q=80',
     },
     {
       id: 'terapia-capilar',
@@ -39,7 +36,7 @@ export default function Courses() {
       description: 'Diagnóstico profundo e protocolos práticos de regeneração e retexturização da fibra capilar.',
       city: 'Porto Alegre - RS',
       slots: 'Vagas Limitadas',
-      image: treatmentCourseImg,
+      image: 'https://images.unsplash.com/photo-1608248597481-496100c80836?auto=format&fit=crop&w=800&q=80',
     },
     {
       id: 'arquitetura-corte',
@@ -48,7 +45,7 @@ export default function Courses() {
       description: 'Harmonização de linhas, volumes e texturas com foco no design personalizado para cada cliente.',
       city: 'Caxias do Sul - RS',
       slots: 'Últimas Vagas',
-      image: cuttingCourseImg,
+      image: 'https://images.unsplash.com/photo-1595425970377-c9703cf48b6d?auto=format&fit=crop&w=800&q=80',
     }
   ];
 

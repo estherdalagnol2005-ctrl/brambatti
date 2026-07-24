@@ -3,7 +3,8 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useEffect, useRef, useState } from 'react';
+import React from 'react';
+import { motion } from 'motion/react';
 
 interface ScrollFadeInProps {
   children: React.ReactNode;
@@ -19,49 +20,23 @@ export default function ScrollFadeIn({
   duration = 800,
   className = '',
 }: ScrollFadeInProps) {
-  const [isVisible, setIsVisible] = useState(false);
-  const elementRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.unobserve(entry.target);
-        }
-      },
-      {
-        threshold: 0.05,
-        rootMargin: '0px 0px -40px 0px', // triggers slightly before entering fully
-      }
-    );
-
-    const currentElement = elementRef.current;
-    if (currentElement) {
-      observer.observe(currentElement);
-    }
-
-    return () => {
-      if (currentElement) {
-        observer.unobserve(currentElement);
-      }
-    };
-  }, []);
+  // Convert milliseconds to seconds for Framer Motion if needed
+  const durationInSeconds = duration > 10 ? duration / 1000 : duration;
+  const delayInSeconds = delay > 10 ? delay / 1000 : delay;
 
   return (
-    <div
-      ref={elementRef}
-      style={{
-        transitionDuration: `${duration}ms`,
-        transitionDelay: `${delay}ms`,
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-12%" }}
+      transition={{
+        duration: durationInSeconds,
+        delay: delayInSeconds,
+        ease: [0.16, 1, 0.3, 1], // Custom elegant ease-out curve
       }}
-      className={`transition-all ease-out transform ${
-        isVisible
-          ? 'opacity-100 translate-y-0'
-          : 'opacity-0 translate-y-5'
-      } ${className}`}
+      className={className}
     >
       {children}
-    </div>
+    </motion.div>
   );
 }

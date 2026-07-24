@@ -24,6 +24,7 @@ export default function Header() {
   const navLinks = [
     { label: 'Início', href: '#inicio' },
     { label: 'Produtos', href: '#produtos' },
+    { label: 'Ecosmetics', href: '#ecosmetics' },
     { label: 'Sobre', href: '#sobre' },
     { label: 'Atendimento', href: '#atendimento' },
     { label: 'Contato', href: '#contato' },

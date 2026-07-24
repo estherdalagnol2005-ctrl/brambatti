@@ -51,6 +51,7 @@ export default function Footer() {
             <nav className="flex flex-col gap-2.5 text-xs">
               <a href="#inicio" className="hover:text-[#48523B] transition-colors">Início</a>
               <a href="#produtos" className="hover:text-[#48523B] transition-colors">Produtos</a>
+              <a href="#ecosmetics" className="hover:text-[#48523B] transition-colors">Ecosmetics Partnership</a>
               <a href="#sobre" className="hover:text-[#48523B] transition-colors">Sobre Nós</a>
               <a href="#atendimento" className="hover:text-[#48523B] transition-colors">Regiões Atendidas</a>
             </nav>
