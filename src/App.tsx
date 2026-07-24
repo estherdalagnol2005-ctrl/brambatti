@@ -25,11 +25,11 @@ export default function App() {
         {/* Hero Section */}
         <Hero />
 
-        {/* Detailed "About the company" */}
-        <About />
-
         {/* Credibility horizontal band */}
         <Credibility />
+
+        {/* Detailed "About the company" */}
+        <About />
 
         {/* Asymmetric Category Grid */}
         <Categories />
