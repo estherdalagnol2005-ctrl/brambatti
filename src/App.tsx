@@ -9,7 +9,6 @@ import Credibility from './components/Credibility';
 import Categories from './components/Categories';
 import BannerImpact from './components/BannerImpact';
 import Courses from './components/Courses';
-import EcosmeticsPartnership from './components/EcosmeticsPartnership';
 import Differentials from './components/Differentials';
 import About from './components/About';
 import ServiceArea from './components/ServiceArea';
@@ -29,6 +28,9 @@ export default function App() {
         {/* Credibility horizontal band */}
         <Credibility />
 
+        {/* Detailed "About the company" */}
+        <About />
+
         {/* Asymmetric Category Grid */}
         <Categories />
 
@@ -40,12 +42,6 @@ export default function App() {
 
         {/* Brambatti key differentials */}
         <Differentials />
-
-        {/* Ecosmetics brand & partnership values */}
-        <EcosmeticsPartnership />
-
-        {/* Detailed "About the company" */}
-        <About />
 
         {/* State delivery coverage / regional service viewer */}
         <ServiceArea />
@@ -59,4 +55,3 @@ export default function App() {
     </div>
   );
 }
-
