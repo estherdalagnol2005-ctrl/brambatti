@@ -4,7 +4,6 @@
  */
 
 import { ArrowUpRight } from 'lucide-react';
-import { getWhatsAppLink } from '../data';
 import ScrollFadeIn from './ScrollFadeIn';
 import coloracaoImg from '../assets/images/cat_coloracao.jpg';
 import descoloracaoImg from '../assets/images/cat_descoloracao.jpg';
@@ -22,6 +21,8 @@ interface CategoryItem {
   gridClass: string;
   aspectClass: string;
 }
+
+const CATEGORY_WHATSAPP_LINK_BASE = 'https://wa.me/555492673323';
 
 export default function Categories() {
   const categories: CategoryItem[] = [
@@ -78,7 +79,8 @@ export default function Categories() {
   ];
 
   const handleCategoryClick = (message: string) => {
-    window.open(getWhatsAppLink(message), '_blank', 'noopener,noreferrer');
+    const whatsappLink = `${CATEGORY_WHATSAPP_LINK_BASE}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappLink, '_blank', 'noopener,noreferrer');
   };
 
   return (
