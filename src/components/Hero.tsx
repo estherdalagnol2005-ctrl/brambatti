@@ -41,6 +41,10 @@ export default function Hero() {
           fetchPriority="high"
           className="hidden h-full w-full origin-center scale-[1.06] object-cover object-center lg:block"
         />
+
+        {/* Sombra leve e localizada apenas atrás do conteúdo */}
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[42%] bg-gradient-to-t from-black/45 via-black/10 to-transparent lg:hidden" />
+        <div className="pointer-events-none absolute bottom-0 left-0 hidden h-[62%] w-[58%] bg-gradient-to-tr from-black/40 via-black/10 to-transparent lg:block" />
       </div>
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 w-full relative z-10 flex items-center justify-center lg:justify-start">
