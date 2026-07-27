@@ -66,6 +66,18 @@ export default function About() {
               {/* Floating Monogram-inspired subtle abstract ornament */}
               <div className="absolute top-[40%] right-[40%] w-16 h-16 border-t-2 border-r-2 border-[#48523B]/20 rounded-tr-[40px] pointer-events-none z-10" />
             </div>
+
+            {/* Mobile-only quote: appears after both images */}
+            <ScrollFadeIn delay={300} className="mt-12 w-full lg:hidden">
+              <div className="border-l-2 border-[#48523B] pl-5 py-1">
+                <span className="font-serif italic text-lg sm:text-xl text-[#30372A] block leading-tight">
+                  “Construindo relações reais que fortalecem marcas e consagram profissionais.”
+                </span>
+                <span className="font-sans text-[8px] tracking-widest uppercase text-[#48523B] font-bold mt-2 block">
+                  Brambatti Distribuidora
+                </span>
+              </div>
+            </ScrollFadeIn>
           </div>
 
           {/* Right Column: Editorial Minimalist Messaging */}
@@ -97,7 +109,7 @@ export default function About() {
             </ScrollFadeIn>
 
             <ScrollFadeIn delay={300} className="w-full">
-              <div className="font-sans text-xs sm:text-sm text-[#615F55] space-y-4 mb-8 leading-relaxed max-w-lg">
+              <div className="font-sans text-xs sm:text-sm text-[#615F55] space-y-4 mb-0 lg:mb-8 leading-relaxed max-w-lg">
                 <p>
                   A Brambatti é o ponto de encontro entre as melhores marcas profissionais e o sucesso duradouro do seu salão de beleza no Rio Grande do Sul.
                 </p>
@@ -107,8 +119,8 @@ export default function About() {
               </div>
             </ScrollFadeIn>
 
-            {/* Accent decorative blockquote */}
-            <ScrollFadeIn delay={400} className="w-full">
+            {/* Desktop-only quote: remains in the text column */}
+            <ScrollFadeIn delay={400} className="hidden w-full lg:block">
               <div className="border-l-2 border-[#48523B] pl-5 py-1">
                 <span className="font-serif italic text-lg sm:text-xl text-[#30372A] block leading-tight">
                   “Construindo relações reais que fortalecem marcas e consagram profissionais.”
