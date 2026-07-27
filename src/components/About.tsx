@@ -4,10 +4,12 @@
  */
 
 import { motion } from 'motion/react';
-import { Sparkles } from 'lucide-react';
 import ScrollFadeIn from './ScrollFadeIn';
-import essencia1Img from '../assets/images/essencia_1.jpg';
-import essencia2Img from '../assets/images/essencia_2.jpg';
+
+const ESSENCIA_PRIMARY_BASE =
+  'https://lh3.googleusercontent.com/d/1X3n0oTOPFer5RwbLxyLg4zi7SVWldh_t';
+const ESSENCIA_SECONDARY_BASE =
+  'https://lh3.googleusercontent.com/d/1VdwBg-a-KgQ806bsglJedI9rZzhqjzdR';
 
 export default function About() {
   return (
@@ -21,7 +23,7 @@ export default function About() {
           {/* Left Column: Asymmetrical Double Image Composition */}
           <div className="lg:col-span-6 relative order-2 lg:order-1">
             <div className="relative w-full max-w-lg mx-auto lg:mx-0 h-[450px] sm:h-[520px]">
-              {/* Primary Main Image (Vivid, elegant, natural colors) */}
+              {/* Primary Main Image (high-resolution responsive source) */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -30,14 +32,18 @@ export default function About() {
                 className="absolute top-0 left-0 w-[75%] h-[80%] overflow-hidden rounded-lg shadow-md border border-[#48523B]/10 bg-white"
               >
                 <img
-                  src={essencia1Img}
+                  src={`${ESSENCIA_PRIMARY_BASE}=w1800`}
+                  srcSet={`${ESSENCIA_PRIMARY_BASE}=w800 800w, ${ESSENCIA_PRIMARY_BASE}=w1200 1200w, ${ESSENCIA_PRIMARY_BASE}=w1800 1800w, ${ESSENCIA_PRIMARY_BASE}=w2400 2400w`}
+                  sizes="(min-width: 1280px) 430px, (min-width: 1024px) 38vw, 75vw"
                   alt="Nossa essência gaúcha - Brambatti Distribuidora"
                   referrerPolicy="no-referrer"
-                  className="w-full h-full object-cover transform hover:scale-103 transition-transform duration-700"
+                  loading="lazy"
+                  decoding="async"
+                  className="h-full w-full object-cover object-center transition-transform duration-700 hover:scale-[1.02]"
                 />
               </motion.div>
 
-              {/* Secondary Overlapping Image (Vivid details) */}
+              {/* Secondary Overlapping Image (high-resolution responsive source) */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -46,10 +52,14 @@ export default function About() {
                 className="absolute bottom-0 right-0 w-[48%] h-[55%] overflow-hidden rounded-lg shadow-lg border-2 border-[#E5E0DC] bg-white z-20"
               >
                 <img
-                  src={essencia2Img}
+                  src={`${ESSENCIA_SECONDARY_BASE}=w1400`}
+                  srcSet={`${ESSENCIA_SECONDARY_BASE}=w640 640w, ${ESSENCIA_SECONDARY_BASE}=w960 960w, ${ESSENCIA_SECONDARY_BASE}=w1400 1400w, ${ESSENCIA_SECONDARY_BASE}=w1800 1800w`}
+                  sizes="(min-width: 1280px) 280px, (min-width: 1024px) 25vw, 48vw"
                   alt="Ecosmetics no Rio Grande do Sul - Brambatti"
                   referrerPolicy="no-referrer"
-                  className="w-full h-full object-cover transform hover:scale-103 transition-transform duration-700"
+                  loading="lazy"
+                  decoding="async"
+                  className="h-full w-full object-cover object-center transition-transform duration-700 hover:scale-[1.02]"
                 />
               </motion.div>
 
