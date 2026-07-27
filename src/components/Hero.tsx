@@ -42,9 +42,9 @@ export default function Hero() {
           className="hidden h-full w-full origin-center scale-[1.06] object-cover object-center lg:block"
         />
 
-        {/* Sombra leve e localizada apenas atrás do conteúdo */}
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[42%] bg-gradient-to-t from-black/45 via-black/10 to-transparent lg:hidden" />
-        <div className="pointer-events-none absolute bottom-0 left-0 hidden h-[62%] w-[58%] bg-gradient-to-tr from-black/40 via-black/10 to-transparent lg:block" />
+        {/* Sombra mais forte, ainda localizada atrás do conteúdo */}
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[56%] bg-gradient-to-t from-black/85 via-black/40 to-transparent lg:hidden" />
+        <div className="pointer-events-none absolute bottom-0 left-0 hidden h-[76%] w-[68%] bg-gradient-to-tr from-black/75 via-black/30 to-transparent lg:block" />
       </div>
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 w-full relative z-10 flex items-center justify-center lg:justify-start">
@@ -58,7 +58,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
-            className="font-sans text-[9px] lg:text-[10px] tracking-[0.18em] uppercase text-[#E5E0DC]/85 font-semibold mb-4 lg:mb-6 block"
+            className="font-sans text-[9px] lg:text-[10px] tracking-[0.18em] uppercase text-[#E5E0DC]/90 font-semibold mb-4 lg:mb-6 block drop-shadow-[0_2px_6px_rgba(0,0,0,0.75)]"
           >
             DISTRIBUIDORA OFICIAL ECOSMETICS NO RS
           </motion.span>
@@ -69,7 +69,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1, ease: 'easeOut' }}
-            className="font-serif font-light text-white text-[36px] lg:text-[56px] leading-[1.0] mb-5 lg:mb-[28px] tracking-tight max-w-[320px] lg:max-w-none"
+            className="font-serif font-light text-white text-[36px] lg:text-[56px] leading-[1.0] mb-5 lg:mb-[28px] tracking-tight max-w-[320px] lg:max-w-none drop-shadow-[0_3px_10px_rgba(0,0,0,0.8)]"
           >
             Feito para <span className="italic font-normal text-[#E5E0DC]">profissionais</span> <br className="hidden lg:block" /> que querem crescer.
           </motion.h1>
@@ -94,7 +94,7 @@ export default function Hero() {
             <a
               id="hero-secondary-btn"
               href="#produtos"
-              className="text-[#E5E0DC]/80 hover:text-white font-sans text-[11px] lg:text-[12px] uppercase tracking-[0.15em] font-bold py-2.5 px-4 transition-all duration-300 flex items-center justify-center w-full lg:w-auto hover:underline decoration-[#E5E0DC]/30 underline-offset-4"
+              className="text-[#E5E0DC]/90 hover:text-white font-sans text-[11px] lg:text-[12px] uppercase tracking-[0.15em] font-bold py-2.5 px-4 transition-all duration-300 flex items-center justify-center w-full lg:w-auto hover:underline decoration-[#E5E0DC]/30 underline-offset-4 drop-shadow-[0_2px_6px_rgba(0,0,0,0.75)]"
             >
               Conhecer produtos
             </a>
