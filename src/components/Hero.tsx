@@ -19,7 +19,7 @@ export default function Hero() {
   return (
     <section
       id="inicio"
-      className="relative min-h-[100dvh] bg-[#000000] pt-28 pb-20 lg:pt-32 lg:pb-28 overflow-hidden flex items-end"
+      className="relative min-h-[100dvh] bg-[#000000] pt-28 pb-7 lg:pt-32 lg:pb-28 overflow-hidden flex items-end"
     >
       {/* Imagem de Fundo em Sangria Total (Full-bleed Background Image) */}
       <div className="absolute inset-0 z-0 overflow-hidden">
@@ -30,7 +30,7 @@ export default function Hero() {
           alt="Equipe Brambatti em frente à sede da Ecosmetics"
           referrerPolicy="no-referrer"
           fetchPriority="high"
-          className="block h-full w-full origin-center scale-[1.12] object-cover object-[center_44%] lg:hidden"
+          className="block h-full w-full origin-center scale-[1.12] object-cover object-[center_34%] lg:hidden"
         />
         {/* Imagem Desktop */}
         <img
@@ -56,7 +56,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
-            className="font-sans text-[9px] lg:text-[10px] tracking-[0.18em] uppercase text-[#E5E0DC]/85 font-semibold mb-6 block"
+            className="font-sans text-[9px] lg:text-[10px] tracking-[0.18em] uppercase text-[#E5E0DC]/85 font-semibold mb-4 lg:mb-6 block"
           >
             DISTRIBUIDORA OFICIAL ECOSMETICS NO RS
           </motion.span>
@@ -67,7 +67,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1, ease: 'easeOut' }}
-            className="font-serif font-light text-white text-[36px] lg:text-[56px] leading-[1.0] mb-[28px] tracking-tight max-w-[320px] lg:max-w-none"
+            className="font-serif font-light text-white text-[36px] lg:text-[56px] leading-[1.0] mb-5 lg:mb-[28px] tracking-tight max-w-[320px] lg:max-w-none"
           >
             Feito para <span className="italic font-normal text-[#E5E0DC]">profissionais</span> <br className="hidden lg:block" /> que querem crescer.
           </motion.h1>
@@ -78,7 +78,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3, ease: 'easeOut' }}
-            className="flex flex-col items-center lg:items-start gap-3 w-full max-w-[280px] lg:max-w-none"
+            className="flex flex-col items-center lg:items-start gap-2 lg:gap-3 w-full max-w-[280px] lg:max-w-none"
           >
             <button
               id="hero-primary-btn"
