@@ -5,8 +5,11 @@
 
 import { motion } from 'motion/react';
 import { ArrowRight } from 'lucide-react';
-import heroDesktop from '../assets/images/hero_desktop.png';
-import heroMobile from '../assets/images/hero_mobile.jpg';
+
+const HERO_DESKTOP_URL =
+  'https://lh3.googleusercontent.com/d/1r7qaFOtHyBxllUKcYC7Im65ILw1dOb5q=w2048';
+const HERO_MOBILE_URL =
+  'https://lh3.googleusercontent.com/d/1Bpx-2Gobb9NL4JHCUeZgP9nhPZU5hQgq=w1600';
 
 export default function Hero() {
   const handlePrimaryClick = () => {
@@ -19,22 +22,24 @@ export default function Hero() {
       className="relative min-h-[100dvh] bg-[#000000] pt-28 pb-20 lg:pt-32 lg:pb-28 overflow-hidden flex items-end"
     >
       {/* Imagem de Fundo em Sangria Total (Full-bleed Background Image) */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 overflow-hidden">
         {/* Imagem Mobile */}
         <img
           id="hero-mobile-img"
-          src={heroMobile}
-          alt="Cabelo sedoso e saudável - Brambatti Distribuidora"
+          src={HERO_MOBILE_URL}
+          alt="Equipe Brambatti em frente à sede da Ecosmetics"
           referrerPolicy="no-referrer"
-          className="w-full h-full object-cover object-center block lg:hidden"
+          fetchPriority="high"
+          className="block h-full w-full origin-center scale-[1.12] object-cover object-[center_44%] lg:hidden"
         />
         {/* Imagem Desktop */}
         <img
           id="hero-main-img"
-          src={heroDesktop}
-          alt="Cabelo sedoso e saudável - Brambatti Distribuidora"
+          src={HERO_DESKTOP_URL}
+          alt="Equipe Brambatti em frente à sede da Ecosmetics"
           referrerPolicy="no-referrer"
-          className="w-full h-full object-cover object-left md:object-center hidden lg:block"
+          fetchPriority="high"
+          className="hidden h-full w-full origin-center scale-[1.06] object-cover object-center lg:block"
         />
         {/* Degradê escuro suave para garantir leitura (embaixo no mobile, na esquerda no desktop) */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/55 to-black/15 lg:bg-gradient-to-r lg:from-black/90 lg:via-black/60 lg:to-transparent pointer-events-none" />
