@@ -42,9 +42,12 @@ export default function Hero() {
           className="hidden h-full w-full origin-center scale-[1.06] object-cover object-center lg:block"
         />
 
-        {/* Sombra mais forte, ainda localizada atrás do conteúdo */}
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[56%] bg-gradient-to-t from-black/85 via-black/40 to-transparent lg:hidden" />
-        <div className="pointer-events-none absolute bottom-0 left-0 hidden h-[76%] w-[68%] bg-gradient-to-tr from-black/75 via-black/30 to-transparent lg:block" />
+        {/* Sombra base contínua para evitar marcas visíveis na imagem */}
+        <div className="pointer-events-none absolute inset-0 bg-black/20" />
+
+        {/* Reforço suave de leitura atrás do conteúdo */}
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[58%] bg-gradient-to-t from-black/70 via-black/32 to-transparent lg:hidden" />
+        <div className="pointer-events-none absolute inset-y-0 left-0 hidden w-[62%] bg-gradient-to-r from-black/58 via-black/24 to-transparent lg:block" />
       </div>
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 w-full relative z-10 flex items-center justify-center lg:justify-start">
