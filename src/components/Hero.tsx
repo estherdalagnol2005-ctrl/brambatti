@@ -30,7 +30,7 @@ export default function Hero() {
           alt="Equipe Brambatti em frente à sede da Ecosmetics"
           referrerPolicy="no-referrer"
           fetchPriority="high"
-          className="block h-full w-full origin-center scale-[1.12] object-cover object-[center_34%] lg:hidden"
+          className="block h-full w-full origin-center scale-[1.22] object-cover object-[center_26%] lg:hidden"
         />
         {/* Imagem Desktop */}
         <img
@@ -41,8 +41,8 @@ export default function Hero() {
           fetchPriority="high"
           className="hidden h-full w-full origin-center scale-[1.06] object-cover object-center lg:block"
         />
-        {/* Degradê escuro suave para garantir leitura (embaixo no mobile, na esquerda no desktop) */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/55 to-black/15 lg:bg-gradient-to-r lg:from-black/90 lg:via-black/60 lg:to-transparent pointer-events-none" />
+        {/* Degradê apenas no mobile para manter a leitura do conteúdo */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/55 to-black/15 pointer-events-none lg:bg-none" />
       </div>
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 w-full relative z-10 flex items-center justify-center lg:justify-start">
