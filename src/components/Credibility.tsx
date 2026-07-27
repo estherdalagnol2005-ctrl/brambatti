@@ -13,15 +13,15 @@ export default function Credibility() {
   ];
 
   const Track = () => (
-    <div className="flex shrink-0 items-center gap-12 whitespace-nowrap sm:gap-16 md:gap-20">
+    <div className="flex shrink-0 items-center whitespace-nowrap pr-8 sm:pr-10 md:pr-12">
       {marqueeItems.map((item, idx) => (
-        <span key={idx} className="flex shrink-0 items-center gap-12 sm:gap-16 md:gap-20">
-          <span className="font-sans text-[10px] font-semibold tracking-widest text-[#E5E0DC] md:text-xs">
+        <span key={idx} className="flex shrink-0 items-center">
+          <span className="font-sans text-[9px] font-semibold tracking-[0.14em] text-[#E5E0DC] sm:text-[10px] lg:text-[11px]">
             {item}
           </span>
           <span
             aria-hidden="true"
-            className="select-none text-xs text-[#E5E0DC]/60"
+            className="mx-8 select-none text-[9px] text-[#E5E0DC]/55 sm:mx-10 sm:text-[10px] md:mx-12"
           >
             ✦
           </span>
@@ -46,7 +46,7 @@ export default function Credibility() {
         }
 
         .animate-marquee-track {
-          animation: marquee-slide 30s linear infinite;
+          animation: marquee-slide 34s linear infinite;
         }
 
         @media (prefers-reduced-motion: reduce) {
