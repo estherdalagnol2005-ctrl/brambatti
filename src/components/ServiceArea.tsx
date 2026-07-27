@@ -3,222 +3,153 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
-import { MapPin, ArrowRight, Building, CheckCircle } from 'lucide-react';
-import { REGIONS, getWhatsAppLink } from '../data';
+import { ArrowRight, CheckCircle2, MapPinned, XCircle } from 'lucide-react';
+import { getWhatsAppLink } from '../data';
 import ScrollFadeIn from './ScrollFadeIn';
 
+const RS_MAP_URL =
+  'https://commons.wikimedia.org/wiki/Special:Redirect/file/Regi%C3%B5es_Geogr%C3%A1ficas_do_Estado_do_Rio_Grande_do_Sul.svg';
+
+const uncoveredMunicipalityMarkers = [
+  { left: 13, top: 34, size: 'lg' },
+  { left: 31, top: 17, size: 'md' },
+  { left: 36, top: 22, size: 'sm' },
+  { left: 40, top: 27, size: 'lg' },
+  { left: 44, top: 34, size: 'md' },
+  { left: 48, top: 40, size: 'sm' },
+  { left: 50, top: 15, size: 'sm' },
+  { left: 55, top: 27, size: 'md' },
+  { left: 57, top: 38, size: 'lg' },
+  { left: 61, top: 19, size: 'sm' },
+  { left: 62, top: 31, size: 'lg' },
+  { left: 64, top: 45, size: 'md' },
+  { left: 67, top: 24, size: 'sm' },
+  { left: 69, top: 37, size: 'md' },
+  { left: 70, top: 49, size: 'lg' },
+  { left: 72, top: 57, size: 'sm' },
+  { left: 74, top: 42, size: 'sm' },
+  { left: 76, top: 52, size: 'md' },
+  { left: 79, top: 36, size: 'sm' },
+  { left: 82, top: 27, size: 'lg' },
+];
+
+const markerSizeClasses = {
+  sm: 'h-2.5 w-2.5 md:h-3 md:w-3',
+  md: 'h-3.5 w-3.5 md:h-4 md:w-4',
+  lg: 'h-4 w-4 md:h-[18px] md:w-[18px]',
+};
+
 export default function ServiceArea() {
-  const [selectedRegionId, setSelectedRegionId] = useState<string>('caxias');
-
-  const selectedRegion = REGIONS.find((r) => r.id === selectedRegionId) || REGIONS[0];
-
-  const handleRegionContact = (regionName: string) => {
+  const handleContact = () => {
     window.open(
-      getWhatsAppLink(`Olá! Gostaria de falar com o representante comercial da Brambatti responsável pelo atendimento em ${regionName}.`),
+      getWhatsAppLink(
+        'Olá! Gostaria de solicitar atendimento comercial da Brambatti no Rio Grande do Sul.'
+      ),
       '_blank',
       'noopener,noreferrer'
     );
   };
 
-  // Coordenadas relativas estilizadas no mapa SVG abstrato do Rio Grande do Sul
-  const regionPins: Record<string, { x: number; y: number; label: string }> = {
-    caxias: { x: 62, y: 44, label: 'Caxias do Sul (Sede)' },
-    serra: { x: 55, y: 40, label: 'Serra Gaúcha' },
-    porto_alegre: { x: 64, y: 55, label: 'Porto Alegre & Metro' },
-    outras: { x: 38, y: 35, label: 'Regiões do Interior' },
-  };
-
   return (
-    <section id="atendimento" className="bg-[#000000] text-[#E5E0DC] py-20 md:py-28 relative overflow-hidden">
-      {/* Decorative light spots */}
-      <div className="absolute -bottom-20 -right-20 w-[60vw] h-[60vw] rounded-full bg-[#48523B]/10 blur-[130px] pointer-events-none" />
+    <section
+      id="atendimento"
+      className="relative overflow-hidden bg-[#0B0B0A] py-20 text-[#E5E0DC] md:py-28"
+    >
+      <div className="pointer-events-none absolute -left-24 top-1/3 h-72 w-72 rounded-full bg-[#48523B]/10 blur-[120px]" />
+      <div className="pointer-events-none absolute -bottom-32 right-0 h-96 w-96 rounded-full bg-[#48523B]/10 blur-[150px]" />
 
-      <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
-        
-        {/* Section Header */}
-        <ScrollFadeIn delay={100} className="w-full">
-          <div className="max-w-2xl mb-16">
-            <span className="font-serif italic text-lg text-[#48523B] block mb-2">
+      <div className="relative z-10 mx-auto max-w-7xl px-6 md:px-12">
+        <div className="grid grid-cols-1 items-center gap-14 lg:grid-cols-12 lg:gap-16">
+          <ScrollFadeIn delay={100} className="lg:col-span-5">
+            <span className="mb-3 block font-serif text-lg italic text-[#7F8B6B]">
               Atendimento Comercial RS
             </span>
-            <h2 className="font-sans font-extrabold text-3xl sm:text-4xl tracking-tight text-[#E5E0DC] uppercase leading-tight">
-              Presença Regional <br />
-              <span className="text-[#48523B]">no Rio Grande do Sul</span>
+
+            <h2 className="max-w-xl font-sans text-3xl font-extrabold uppercase leading-[1.08] tracking-tight text-white sm:text-4xl lg:text-[42px]">
+              Atendimento em quase todo o{' '}
+              <span className="text-[#7F8B6B]">Rio Grande do Sul</span>
             </h2>
-            <p className="font-sans text-xs sm:text-sm text-[#E5E0DC]/70 mt-4 leading-relaxed">
-              Oferecemos suporte presencial de ponta a ponta. Nossos consultores visitam o seu salão periodicamente para apresentar lançamentos, gerenciar estoques e prestar suporte técnico qualificado.
+
+            <p className="mt-7 max-w-xl font-sans text-sm leading-7 text-[#E5E0DC]/75">
+              A Brambatti realiza atendimento e envios para praticamente todo o estado do Rio Grande do Sul, garantindo agilidade, suporte comercial e acesso às melhores marcas do segmento profissional.
             </p>
-          </div>
-        </ScrollFadeIn>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-          
-          {/* Left Column: Interactive Selector */}
-          <div className="lg:col-span-6">
-            <ScrollFadeIn delay={150} className="flex flex-col gap-4">
-              <p className="font-sans text-xs tracking-widest uppercase font-bold text-[#48523B] mb-2">
-                Selecione a sua região para detalhes:
+            <div className="mt-6 border-l-2 border-[#7F8B6B] pl-4">
+              <p className="font-sans text-sm leading-6 text-[#E5E0DC]/90">
+                As únicas cidades não atendidas estão destacadas no mapa.
               </p>
+            </div>
 
-              <div className="flex flex-col gap-3">
-                {REGIONS.map((region) => {
-                  const isActive = region.id === selectedRegionId;
-                  return (
-                    <button
-                      key={region.id}
-                      onClick={() => setSelectedRegionId(region.id)}
-                      className={`w-full text-left p-5 transition-all duration-300 flex items-start justify-between rounded-lg border ${
-                        isActive
-                          ? 'bg-[#48523B]/25 border-[#48523B] text-[#E5E0DC]'
-                          : 'bg-white/5 border-white/10 hover:border-[#48523B]/50 hover:bg-white/10 text-[#E5E0DC]/80'
-                      }`}
+            <div className="mt-8 flex flex-col gap-3 border-y border-white/10 py-5 sm:flex-row sm:items-center sm:gap-7">
+              <div className="flex items-center gap-2.5">
+                <CheckCircle2 className="h-4 w-4 text-[#7F8B6B]" />
+                <span className="font-sans text-[10px] font-bold uppercase tracking-[0.14em] text-[#E5E0DC]/80">
+                  Regiões atendidas
+                </span>
+              </div>
+
+              <div className="flex items-center gap-2.5">
+                <XCircle className="h-4 w-4 text-[#E13232]" />
+                <span className="font-sans text-[10px] font-bold uppercase tracking-[0.14em] text-[#E5E0DC]/80">
+                  Cidades não atendidas
+                </span>
+              </div>
+            </div>
+
+            <button
+              onClick={handleContact}
+              className="group mt-8 inline-flex h-12 w-full items-center justify-center gap-3 bg-[#48523B] px-7 font-sans text-[11px] font-extrabold uppercase tracking-[0.16em] text-white transition-colors duration-300 hover:bg-[#59654A] sm:w-auto"
+            >
+              Fale com a Brambatti
+              <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+            </button>
+          </ScrollFadeIn>
+
+          <ScrollFadeIn delay={220} className="lg:col-span-7">
+            <div className="relative mx-auto w-full max-w-[680px] overflow-hidden border border-white/10 bg-[#F1F0EA] p-4 sm:p-6 md:p-8">
+              <div className="mb-5 flex items-center justify-between gap-4 border-b border-black/10 pb-4">
+                <div className="flex items-center gap-2.5">
+                  <MapPinned className="h-4 w-4 text-[#48523B]" />
+                  <span className="font-sans text-[10px] font-extrabold uppercase tracking-[0.16em] text-[#48523B]">
+                    Cobertura no Rio Grande do Sul
+                  </span>
+                </div>
+
+                <span className="hidden font-serif text-xs italic text-[#615F55] sm:block">
+                  Atendimento estadual
+                </span>
+              </div>
+
+              <div className="relative mx-auto aspect-[1.15/1] w-full overflow-hidden">
+                <img
+                  src={RS_MAP_URL}
+                  alt="Mapa com o contorno real do Rio Grande do Sul e indicação das cidades não atendidas pela Brambatti"
+                  referrerPolicy="no-referrer"
+                  className="h-full w-full object-contain opacity-90 [filter:grayscale(1)_sepia(.18)_saturate(.55)_brightness(1.08)_contrast(.9)]"
+                />
+
+                <div className="pointer-events-none absolute inset-0" aria-hidden="true">
+                  {uncoveredMunicipalityMarkers.map((marker, index) => (
+                    <span
+                      key={`${marker.left}-${marker.top}-${index}`}
+                      className={`absolute -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-white/90 bg-[#E13232] shadow-[0_2px_8px_rgba(132,20,20,0.32)] ${markerSizeClasses[marker.size as keyof typeof markerSizeClasses]}`}
+                      style={{ left: `${marker.left}%`, top: `${marker.top}%` }}
                     >
-                      <div className="flex gap-4">
-                        <div className={`mt-1 p-1.5 transition-colors ${isActive ? 'text-white bg-[#48523B]' : 'text-[#48523B]'}`}>
-                          <MapPin className="w-4 h-4" />
-                        </div>
-                        <div>
-                          <h3 className="font-sans font-extrabold text-base uppercase tracking-wider text-white">
-                            {region.name}
-                          </h3>
-                          <p className={`font-sans text-xs mt-1 leading-relaxed ${isActive ? 'text-[#E5E0DC]/90' : 'text-[#E5E0DC]/65'}`}>
-                            {region.description}
-                          </p>
-                        </div>
-                      </div>
-                    </button>
-                  );
-                })}
-              </div>
-
-              {/* Coverage Panel Container (Details) */}
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={selectedRegionId}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -10 }}
-                  transition={{ duration: 0.3 }}
-                  className="mt-6 p-6 border border-[#48523B]/30 bg-[#48523B]/10 rounded-lg"
-                >
-                  <div className="flex items-center gap-2 mb-4">
-                    <Building className="w-4 h-4 text-[#48523B]" />
-                    <span className="font-sans text-xs uppercase tracking-widest font-bold text-[#48523B]">
-                      Cidades em destaque nesta região:
+                      <span className="absolute inset-[-4px] rounded-full border border-[#E13232]/30" />
                     </span>
-                  </div>
-
-                  <div className="grid grid-cols-2 gap-x-4 gap-y-2 mb-6">
-                    {selectedRegion.mainCities.map((city) => (
-                      <div key={city} className="flex items-center gap-2 text-xs text-[#E5E0DC]/90">
-                        <div className="w-1.5 h-1.5 rounded-full bg-[#48523B]" />
-                        <span>{city}</span>
-                      </div>
-                    ))}
-                  </div>
-
-                  <button
-                    onClick={() => handleRegionContact(selectedRegion.name)}
-                    className="w-full text-center bg-[#48523B] hover:bg-[#30372A] text-[#E5E0DC] font-sans text-xs uppercase tracking-widest font-bold py-3 px-6 transition-all duration-300"
-                  >
-                    Contatar consultor de {selectedRegion.name}
-                  </button>
-                </motion.div>
-              </AnimatePresence>
-
-              <span className="font-serif italic text-xs text-[#48523B] mt-2 block">
-                *Atendimento integral e personalizado em cada município citado.
-              </span>
-            </ScrollFadeIn>
-          </div>
-
-          {/* Right Column: Stylized Minimalist Map of RS */}
-          <div className="lg:col-span-6 flex flex-col items-center">
-            <ScrollFadeIn delay={250} className="w-full flex justify-center">
-              <div className="relative w-full aspect-square max-w-[420px] bg-white/5 border border-[#48523B]/25 p-8 flex flex-col justify-between rounded-lg">
-                
-                {/* Card Label */}
-                <div className="absolute top-6 left-6 flex items-center gap-2 z-10">
-                  <div className="w-2.5 h-2.5 rounded-full bg-[#48523B] animate-pulse" />
-                  <span className="font-sans text-[9px] tracking-widest uppercase font-bold text-[#48523B]">
-                    Distribuição no Estado
-                  </span>
-                </div>
-
-                {/* Styled Abstract SVG of RS */}
-                <div className="w-full h-full flex items-center justify-center relative mt-4">
-                  <svg
-                    viewBox="0 0 100 100"
-                    className="w-full h-full max-h-[300px] text-[#48523B]/10 stroke-[#48523B]/30 stroke-1"
-                    fill="currentColor"
-                    style={{ transform: 'scale(1.15)' }}
-                  >
-                    {/* Abstract stylized contour of Rio Grande do Sul */}
-                    <path
-                      d="M 40,20 
-                         C 50,15 65,18 70,22 
-                         C 75,25 78,35 75,45 
-                         C 72,55 77,65 72,75 
-                         C 68,82 58,85 52,90 
-                         C 48,93 42,90 38,82 
-                         C 35,78 28,75 25,65 
-                         C 22,55 18,48 22,40 
-                         C 25,32 32,25 40,20 Z"
-                      className="transition-colors duration-500 hover:text-[#48523B]/20"
-                    />
-                    
-                    {/* Elegant decorative grid inside the map */}
-                    <line x1="20" y1="50" x2="80" y2="50" stroke="#48523B" strokeWidth="0.05" strokeDasharray="1,1" />
-                    <line x1="50" y1="20" x2="50" y2="80" stroke="#48523B" strokeWidth="0.05" strokeDasharray="1,1" />
-                  </svg>
-
-                  {/* Interactive Dynamic Pins on Map */}
-                  {Object.entries(regionPins).map(([id, pos]) => {
-                    const isActive = id === selectedRegionId;
-                    return (
-                      <button
-                        key={id}
-                        onClick={() => setSelectedRegionId(id)}
-                        className="absolute p-2 -translate-x-1/2 -translate-y-1/2 group transition-all focus:outline-none animate-fade-in"
-                        style={{ left: `${pos.x}%`, top: `${pos.y}%` }}
-                      >
-                        <div className="relative">
-                          {/* Outer pulsing ring */}
-                          {isActive && (
-                            <div className="absolute -inset-1.5 rounded-full bg-[#48523B]/40 animate-ping" />
-                          )}
-                          {/* Interactive Circle Pin */}
-                          <div
-                            className={`w-3.5 h-3.5 rounded-full border transition-all duration-300 flex items-center justify-center ${
-                              isActive
-                                ? 'bg-white border-[#48523B] scale-125 shadow-md'
-                                : 'bg-[#48523B] border-[#E5E0DC]/40 hover:bg-[#FAF8F6] hover:scale-110'
-                            }`}
-                          />
-                          {/* Tooltip on Hover */}
-                          <span className="pointer-events-none absolute bottom-5 left-1/2 -translate-x-1/2 whitespace-nowrap bg-[#000000] border border-[#48523B]/30 px-2 py-1 text-[8px] tracking-wider uppercase font-extrabold text-[#E5E0DC] rounded-none opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-30">
-                            {pos.label}
-                          </span>
-                        </div>
-                      </button>
-                    );
-                  })}
-                </div>
-
-                {/* Map Footer Info */}
-                <div className="text-center mt-4">
-                  <span className="font-sans text-[9px] text-[#48523B] uppercase tracking-widest font-extrabold">
-                    Legenda: Clique nos pontos para selecionar
-                  </span>
+                  ))}
                 </div>
               </div>
-            </ScrollFadeIn>
-          </div>
 
+              <div className="mt-5 flex items-center gap-3 border-t border-black/10 pt-4">
+                <span className="h-2.5 w-2.5 shrink-0 rounded-full bg-[#E13232]" />
+                <p className="font-sans text-[10px] font-bold uppercase tracking-[0.12em] text-[#615F55]">
+                  Municípios em vermelho: cidades não atendidas.
+                </p>
+              </div>
+            </div>
+          </ScrollFadeIn>
         </div>
-
       </div>
     </section>
   );
