@@ -172,7 +172,7 @@ export default function Courses() {
 
       <div className="relative z-10 mx-auto max-w-7xl px-6 md:px-12">
         <ScrollFadeIn delay={100} className="w-full">
-          <div className="mb-12 flex flex-col gap-6 md:mb-16 md:flex-row md:items-end md:justify-between">
+          <div className="mb-12 md:mb-16">
             <div className="max-w-xl">
               <span className="mb-3 block font-sans text-[10px] font-bold uppercase tracking-[0.25em] text-[#48523B]">
                 Cursos e capacitações
@@ -184,13 +184,6 @@ export default function Courses() {
                   novas possibilidades.
                 </span>
               </h2>
-            </div>
-
-            <div className="max-w-md">
-              <p className="font-sans text-xs leading-relaxed text-[#615F55] sm:text-sm">
-                Duas oportunidades para aprender com Gabriel Schaffel e
-                aprimorar técnicas que elevam os resultados no salão.
-              </p>
             </div>
           </div>
         </ScrollFadeIn>
