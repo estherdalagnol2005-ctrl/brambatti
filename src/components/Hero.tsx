@@ -5,11 +5,8 @@
 
 import { motion } from 'motion/react';
 import { ArrowRight } from 'lucide-react';
-
-const HERO_DESKTOP_URL =
-  'https://lh3.googleusercontent.com/d/1r7qaFOtHyBxllUKcYC7Im65ILw1dOb5q=w2048';
-const HERO_MOBILE_URL =
-  'https://lh3.googleusercontent.com/d/1Bpx-2Gobb9NL4JHCUeZgP9nhPZU5hQgq=w1600';
+import heroDesktopImg from '../assets/images/hero_desktop_novo.webp';
+import heroMobileImg from '../assets/images/hero_mobile_novo.webp';
 
 export default function Hero() {
   const handlePrimaryClick = () => {
@@ -23,31 +20,25 @@ export default function Hero() {
     >
       {/* Imagem de Fundo em Sangria Total (Full-bleed Background Image) */}
       <div className="absolute inset-0 z-0 overflow-hidden">
-        {/* Imagem Mobile */}
-        <img
-          id="hero-mobile-img"
-          src={HERO_MOBILE_URL}
-          alt="Equipe Brambatti em frente à sede da Ecosmetics"
-          referrerPolicy="no-referrer"
-          fetchPriority="high"
-          className="block h-full w-full origin-center scale-[1.30] object-cover object-[center_23%] lg:hidden"
-        />
-        {/* Imagem Desktop */}
-        <img
-          id="hero-main-img"
-          src={HERO_DESKTOP_URL}
-          alt="Equipe Brambatti em frente à sede da Ecosmetics"
-          referrerPolicy="no-referrer"
-          fetchPriority="high"
-          className="hidden h-full w-full origin-center scale-[1.06] object-cover object-center lg:block"
-        />
+        <picture className="block h-full w-full lg:absolute lg:inset-x-0 lg:bottom-0 lg:top-[76px] lg:h-auto">
+          <source media="(min-width: 1024px)" srcSet={heroDesktopImg} />
+          <img
+            id="hero-main-img"
+            src={heroMobileImg}
+            alt="Profissionais Brambatti em um ambiente de beleza"
+            fetchPriority="high"
+            decoding="async"
+            className="h-full w-full object-cover object-center lg:object-top"
+          />
+        </picture>
 
         {/* Sombra base contínua para evitar marcas visíveis na imagem */}
         <div className="pointer-events-none absolute inset-0 bg-black/20" />
 
         {/* Reforço suave de leitura atrás do conteúdo */}
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[58%] bg-gradient-to-t from-black/70 via-black/32 to-transparent lg:hidden" />
-        <div className="pointer-events-none absolute inset-y-0 left-0 hidden w-[62%] bg-gradient-to-r from-black/58 via-black/24 to-transparent lg:block" />
+        <div className="pointer-events-none absolute inset-y-0 left-0 hidden w-[70%] bg-gradient-to-r from-black/78 via-black/42 to-transparent lg:block" />
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 hidden h-[46%] bg-gradient-to-t from-black/72 via-black/28 to-transparent lg:block" />
       </div>
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 w-full relative z-10 flex items-center justify-center lg:justify-start">
@@ -74,7 +65,11 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.1, ease: 'easeOut' }}
             className="font-serif font-light text-white text-[36px] lg:text-[56px] leading-[1.0] mb-5 lg:mb-[28px] tracking-tight max-w-[320px] lg:max-w-none drop-shadow-[0_3px_10px_rgba(0,0,0,0.8)]"
           >
-            Feito para <span className="italic font-normal text-[#E5E0DC]">profissionais</span> <br className="hidden lg:block" /> que querem crescer.
+            Feito para{' '}
+            <span className="italic font-normal text-[#B8C69F] drop-shadow-[0_2px_14px_rgba(184,198,159,0.28)]">
+              profissionais
+            </span>{' '}
+            <br className="hidden lg:block" /> que querem crescer.
           </motion.h1>
 
           {/* Botões de Ação */}
