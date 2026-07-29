@@ -20,7 +20,7 @@ export default function Hero() {
     >
       {/* Imagem de Fundo em Sangria Total (Full-bleed Background Image) */}
       <div className="absolute inset-0 z-0 overflow-hidden">
-        <picture className="block h-full w-full">
+        <picture className="block h-full w-full lg:absolute lg:inset-x-0 lg:bottom-0 lg:top-[76px] lg:h-auto">
           <source media="(min-width: 1024px)" srcSet={heroDesktopImg} />
           <img
             id="hero-main-img"
@@ -38,6 +38,7 @@ export default function Hero() {
         {/* Reforço suave de leitura atrás do conteúdo */}
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[58%] bg-gradient-to-t from-black/70 via-black/32 to-transparent lg:hidden" />
         <div className="pointer-events-none absolute inset-y-0 left-0 hidden w-[70%] bg-gradient-to-r from-black/78 via-black/42 to-transparent lg:block" />
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 hidden h-[46%] bg-gradient-to-t from-black/72 via-black/28 to-transparent lg:block" />
       </div>
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 w-full relative z-10 flex items-center justify-center lg:justify-start">
