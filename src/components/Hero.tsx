@@ -66,7 +66,7 @@ export default function Hero() {
             className="font-serif font-light text-white text-[36px] lg:text-[56px] leading-[1.0] mb-5 lg:mb-[28px] tracking-tight max-w-[320px] lg:max-w-none drop-shadow-[0_3px_10px_rgba(0,0,0,0.8)]"
           >
             Feito para{' '}
-            <span className="italic font-normal text-[#E5E0DC] lg:text-[#B8C69F] lg:drop-shadow-[0_2px_14px_rgba(184,198,159,0.28)]">
+            <span className="italic font-normal text-[#B8C69F] drop-shadow-[0_2px_14px_rgba(184,198,159,0.28)]">
               profissionais
             </span>{' '}
             <br className="hidden lg:block" /> que querem crescer.
