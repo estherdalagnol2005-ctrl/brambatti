@@ -28,7 +28,7 @@ export default function Hero() {
             alt="Profissionais Brambatti em um ambiente de beleza"
             fetchPriority="high"
             decoding="async"
-            className="h-full w-full object-cover object-center"
+            className="h-full w-full object-cover object-center lg:object-top"
           />
         </picture>
 
@@ -37,7 +37,7 @@ export default function Hero() {
 
         {/* Reforço suave de leitura atrás do conteúdo */}
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[58%] bg-gradient-to-t from-black/70 via-black/32 to-transparent lg:hidden" />
-        <div className="pointer-events-none absolute inset-y-0 left-0 hidden w-[62%] bg-gradient-to-r from-black/58 via-black/24 to-transparent lg:block" />
+        <div className="pointer-events-none absolute inset-y-0 left-0 hidden w-[70%] bg-gradient-to-r from-black/78 via-black/42 to-transparent lg:block" />
       </div>
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 w-full relative z-10 flex items-center justify-center lg:justify-start">
