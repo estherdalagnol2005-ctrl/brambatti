@@ -83,13 +83,13 @@ function CourseCard({ course }: { course: Course }) {
         />
       </div>
 
-      <div className="flex flex-1 flex-col p-6 md:p-7">
+      <div className="flex flex-1 flex-col p-5 sm:p-6">
         <div className="flex-1">
           <span className="mb-2 block font-sans text-[9px] font-black uppercase tracking-[0.2em] text-[#48523B]">
             {course.category}
           </span>
 
-          <h3 className="font-serif text-xl font-normal leading-snug text-black transition-colors duration-300 group-hover:text-[#48523B] md:text-2xl">
+          <h3 className="font-serif text-lg font-normal leading-snug text-black transition-colors duration-300 group-hover:text-[#48523B] md:text-xl">
             {course.name}
           </h3>
 
@@ -113,19 +113,21 @@ function CourseCard({ course }: { course: Course }) {
           </ul>
         </div>
 
-        <div className="mt-6 flex flex-wrap items-center gap-3 border-t border-[#615F55]/10 pt-5">
-          <span className="flex items-center gap-1.5 font-sans text-[10px] font-semibold uppercase tracking-wider text-[#615F55]">
-            <CalendarDays className="h-3.5 w-3.5 text-[#48523B]" />
-            {course.date}
-          </span>
+        <div className="mt-6 grid gap-3 border-t border-[#615F55]/10 pt-5">
+          <div className="flex items-center justify-between gap-3">
+            <span className="flex items-center gap-1.5 font-sans text-[10px] font-semibold uppercase tracking-wider text-[#615F55]">
+              <CalendarDays className="h-3.5 w-3.5 text-[#48523B]" />
+              {course.date}
+            </span>
+
+            <span className="rounded-sm bg-[#48523B]/10 px-2 py-0.5 text-[8px] font-extrabold uppercase tracking-wider text-[#48523B]">
+              {course.slots}
+            </span>
+          </div>
 
           <span className="flex items-center gap-1.5 font-sans text-[10px] font-semibold uppercase tracking-wider text-[#615F55]">
             <MapPin className="h-3.5 w-3.5 text-[#48523B]" />
             {course.city}
-          </span>
-
-          <span className="rounded-sm bg-[#48523B]/10 px-2 py-0.5 text-[8px] font-extrabold uppercase tracking-wider text-[#48523B]">
-            {course.slots}
           </span>
         </div>
 
@@ -193,7 +195,7 @@ export default function Courses() {
           </div>
         </ScrollFadeIn>
 
-        <div className="hidden grid-cols-2 gap-8 md:grid lg:mx-auto lg:max-w-5xl">
+        <div className="mx-auto hidden max-w-3xl grid-cols-2 gap-6 md:grid">
           {courses.map((course, index) => (
             <ScrollFadeIn
               key={course.id}
@@ -206,11 +208,11 @@ export default function Courses() {
         </div>
 
         <div className="md:hidden">
-          <div className="-mx-6 flex snap-x snap-mandatory gap-5 overflow-x-auto px-6 pb-5 scrollbar-none">
+          <div className="-mx-6 flex snap-x snap-mandatory items-stretch gap-4 overflow-x-auto px-6 pb-5 scrollbar-none">
             {courses.map((course) => (
               <div
                 key={course.id}
-                className="h-full w-[84vw] max-w-[340px] shrink-0 snap-start"
+                className="flex w-[80vw] max-w-[300px] shrink-0 snap-start"
               >
                 <CourseCard course={course} />
               </div>
