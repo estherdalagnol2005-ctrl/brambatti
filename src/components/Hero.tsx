@@ -5,11 +5,8 @@
 
 import { motion } from 'motion/react';
 import { ArrowRight } from 'lucide-react';
-
-const HERO_DESKTOP_URL =
-  'https://lh3.googleusercontent.com/d/1r7qaFOtHyBxllUKcYC7Im65ILw1dOb5q=w2048';
-const HERO_MOBILE_URL =
-  'https://lh3.googleusercontent.com/d/1Bpx-2Gobb9NL4JHCUeZgP9nhPZU5hQgq=w1600';
+import heroDesktopImg from '../assets/images/hero_desktop_novo.webp';
+import heroMobileImg from '../assets/images/hero_mobile_novo.webp';
 
 export default function Hero() {
   const handlePrimaryClick = () => {
@@ -23,24 +20,17 @@ export default function Hero() {
     >
       {/* Imagem de Fundo em Sangria Total (Full-bleed Background Image) */}
       <div className="absolute inset-0 z-0 overflow-hidden">
-        {/* Imagem Mobile */}
-        <img
-          id="hero-mobile-img"
-          src={HERO_MOBILE_URL}
-          alt="Equipe Brambatti em frente à sede da Ecosmetics"
-          referrerPolicy="no-referrer"
-          fetchPriority="high"
-          className="block h-full w-full origin-center scale-[1.30] object-cover object-[center_23%] lg:hidden"
-        />
-        {/* Imagem Desktop */}
-        <img
-          id="hero-main-img"
-          src={HERO_DESKTOP_URL}
-          alt="Equipe Brambatti em frente à sede da Ecosmetics"
-          referrerPolicy="no-referrer"
-          fetchPriority="high"
-          className="hidden h-full w-full origin-center scale-[1.06] object-cover object-center lg:block"
-        />
+        <picture className="block h-full w-full">
+          <source media="(min-width: 1024px)" srcSet={heroDesktopImg} />
+          <img
+            id="hero-main-img"
+            src={heroMobileImg}
+            alt="Profissionais Brambatti em um ambiente de beleza"
+            fetchPriority="high"
+            decoding="async"
+            className="h-full w-full object-cover object-center"
+          />
+        </picture>
 
         {/* Sombra base contínua para evitar marcas visíveis na imagem */}
         <div className="pointer-events-none absolute inset-0 bg-black/20" />
