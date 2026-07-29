@@ -72,10 +72,10 @@ function CourseCard({ course }: { course: Course }) {
       href={getWhatsAppLink(whatsAppMessage)}
       target="_blank"
       rel="noopener noreferrer"
-      className="group flex h-full flex-col overflow-hidden rounded-lg border border-[#615F55]/10 bg-[#FAF8F6] transition-all duration-500 hover:-translate-y-1 hover:border-[#48523B]/30 hover:shadow-[0_18px_45px_rgba(72,82,59,0.10)]"
+      className="group flex h-full flex-col overflow-hidden rounded-lg border border-[#615F55]/10 bg-[#FAF8F6] transition-all duration-500 hover:-translate-y-1 hover:border-[#48523B]/30 hover:shadow-[0_18px_45px_rgba(72,82,59,0.10)] lg:flex-row lg:items-start"
       aria-label={`Saiba mais sobre o curso ${course.name} em ${course.city}`}
     >
-      <div className="aspect-[4/5] shrink-0 overflow-hidden bg-[#E5E0DC]">
+      <div className="aspect-[4/5] shrink-0 overflow-hidden bg-[#E5E0DC] lg:m-5 lg:mr-0 lg:w-[36%] lg:rounded-md">
         <img
           src={course.image}
           alt={`Curso ${course.name} com ${course.instructor}, em ${course.city}, dia ${course.date}`}
@@ -83,7 +83,7 @@ function CourseCard({ course }: { course: Course }) {
         />
       </div>
 
-      <div className="flex flex-1 flex-col p-5 sm:p-6">
+      <div className="flex flex-1 flex-col p-5 sm:p-6 lg:p-5">
         <div className="flex-1">
           <span className="mb-2 block font-sans text-[9px] font-black uppercase tracking-[0.2em] text-[#48523B]">
             {course.category}
@@ -97,11 +97,11 @@ function CourseCard({ course }: { course: Course }) {
             Com {course.instructor}
           </p>
 
-          <ul className="mt-5 grid gap-2 border-t border-[#615F55]/10 pt-5">
+          <ul className="mt-5 grid gap-2 border-t border-[#615F55]/10 pt-5 lg:mt-4 lg:gap-1.5 lg:pt-4">
             {course.topics.map((topic) => (
               <li
                 key={topic}
-                className="flex items-start gap-2 font-sans text-xs leading-relaxed text-[#615F55]"
+                className="flex items-start gap-2 font-sans text-xs leading-relaxed text-[#615F55] lg:text-[11px]"
               >
                 <span
                   aria-hidden="true"
@@ -113,7 +113,7 @@ function CourseCard({ course }: { course: Course }) {
           </ul>
         </div>
 
-        <div className="mt-6 grid gap-3 border-t border-[#615F55]/10 pt-5">
+        <div className="mt-6 grid gap-3 border-t border-[#615F55]/10 pt-5 lg:mt-4 lg:pt-4">
           <div className="flex items-center justify-between gap-3">
             <span className="flex items-center gap-1.5 font-sans text-[10px] font-semibold uppercase tracking-wider text-[#615F55]">
               <CalendarDays className="h-3.5 w-3.5 text-[#48523B]" />
@@ -131,7 +131,7 @@ function CourseCard({ course }: { course: Course }) {
           </span>
         </div>
 
-        <div className="mt-5 flex items-center justify-between border-t border-[#615F55]/10 pt-4 text-[11px] font-bold uppercase tracking-widest text-[#48523B] transition-colors group-hover:text-black">
+        <div className="mt-5 flex items-center justify-between border-t border-[#615F55]/10 pt-4 text-[11px] font-bold uppercase tracking-widest text-[#48523B] transition-colors group-hover:text-black lg:mt-4 lg:pt-3">
           <span>Quero participar</span>
           <div className="flex items-center gap-1">
             <GraduationCap className="h-4 w-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
@@ -195,7 +195,7 @@ export default function Courses() {
           </div>
         </ScrollFadeIn>
 
-        <div className="mx-auto hidden max-w-3xl grid-cols-2 gap-6 md:grid">
+        <div className="mx-auto hidden max-w-6xl grid-cols-2 gap-6 lg:grid">
           {courses.map((course, index) => (
             <ScrollFadeIn
               key={course.id}
@@ -207,7 +207,7 @@ export default function Courses() {
           ))}
         </div>
 
-        <div className="md:hidden">
+        <div className="lg:hidden">
           <div className="-mx-6 flex snap-x snap-mandatory items-stretch gap-4 overflow-x-auto px-6 pb-5 scrollbar-none">
             {courses.map((course) => (
               <div
