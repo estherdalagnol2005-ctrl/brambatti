@@ -38,7 +38,7 @@ export default function Header() {
       {/* Top Warning Bar */}
       <div
         id="top-warning-bar"
-        className="fixed top-0 left-0 right-0 z-50 bg-[#424139] text-[#F5E9DD] uppercase tracking-widest font-semibold flex items-center justify-center border-b border-white/5 h-[24px] lg:h-[26px] text-[9.5px] lg:text-[10px] leading-none py-0"
+        className="fixed top-0 left-0 right-0 z-50 bg-[#AB907B] text-white uppercase tracking-widest font-semibold flex items-center justify-center border-b border-white/10 h-[24px] lg:h-[26px] text-[9.5px] lg:text-[10px] leading-none py-0"
       >
         <span className="whitespace-nowrap overflow-hidden text-ellipsis">
           Entregamos para todo o Rio Grande do Sul
