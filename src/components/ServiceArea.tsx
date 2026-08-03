@@ -43,36 +43,36 @@ export default function ServiceArea() {
   return (
     <section
       id="atendimento"
-      className="relative overflow-hidden bg-[#0B0B0A] py-20 text-[#E5E0DC] md:py-28"
+      className="relative overflow-hidden bg-[#20201E] py-20 text-[#F5E9DD] md:py-28"
     >
-      <div className="pointer-events-none absolute -left-24 top-1/3 h-72 w-72 rounded-full bg-[#48523B]/10 blur-[120px]" />
-      <div className="pointer-events-none absolute -bottom-32 right-0 h-96 w-96 rounded-full bg-[#48523B]/10 blur-[150px]" />
+      <div className="pointer-events-none absolute -left-24 top-1/3 h-72 w-72 rounded-full bg-[#AB907B]/12 blur-[120px]" />
+      <div className="pointer-events-none absolute -bottom-32 right-0 h-96 w-96 rounded-full bg-[#AB907B]/12 blur-[150px]" />
 
       <div className="relative z-10 mx-auto max-w-7xl px-6 md:px-12">
         <div className="grid grid-cols-1 items-center gap-14 lg:grid-cols-12 lg:gap-16">
           <ScrollFadeIn delay={100} className="lg:col-span-5">
-            <span className="mb-3 block font-serif text-lg italic text-[#7F8B6B]">
+            <span className="mb-3 block font-serif text-lg italic text-[#D4BCAE]">
               Atendimento Comercial RS
             </span>
 
             <h2 className="max-w-xl font-sans text-3xl font-extrabold uppercase leading-[1.08] tracking-tight text-white sm:text-4xl lg:text-[42px]">
-              Atendemos todo o <span className="text-[#7F8B6B]">Rio Grande do Sul</span>
+              Atendemos todo o <span className="text-[#D4BCAE]">Rio Grande do Sul</span>
             </h2>
 
-            <p className="mt-7 max-w-xl font-sans text-sm leading-7 text-[#E5E0DC]/75">
+            <p className="mt-7 max-w-xl font-sans text-sm leading-7 text-[#F5E9DD]/75">
               A Brambatti realiza atendimento comercial e envios para todo o estado, com
               agilidade, suporte próximo e acesso às melhores marcas do segmento profissional.
             </p>
 
-            <div className="mt-6 border-l-2 border-[#E13232] pl-4">
-              <p className="font-sans text-sm leading-6 text-[#E5E0DC]/90">
+            <div className="mt-6 border-l-2 border-[#851A21] pl-4">
+              <p className="font-sans text-sm leading-6 text-[#F5E9DD]/90">
                 Somente as áreas destacadas em vermelho no mapa ficam fora da nossa cobertura.
               </p>
             </div>
 
             <button
               onClick={handleContact}
-              className="group mt-8 inline-flex h-12 w-full items-center justify-center gap-3 bg-[#48523B] px-7 font-sans text-[11px] font-extrabold uppercase tracking-[0.16em] text-white transition-colors duration-300 hover:bg-[#59654A] sm:w-auto"
+              className="group mt-8 inline-flex h-12 w-full items-center justify-center gap-3 bg-[#AB907B] px-7 font-sans text-[11px] font-extrabold uppercase tracking-[0.16em] text-white transition-colors duration-300 hover:bg-[#6E6A66] sm:w-auto"
             >
               Fale com a Brambatti
               <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
@@ -80,10 +80,10 @@ export default function ServiceArea() {
           </ScrollFadeIn>
 
           <ScrollFadeIn delay={220} className="lg:col-span-7">
-            <div className="mx-auto w-full max-w-[760px] border border-white/10 bg-[#F3F1EB] p-4 sm:p-6 md:p-8">
+            <div className="mx-auto w-full max-w-[760px] border border-white/10 bg-[#F5E9DD] p-4 sm:p-6 md:p-8">
               <div className="mb-4 flex items-center gap-2.5 border-b border-black/10 pb-4">
-                <MapPinned className="h-4 w-4 text-[#48523B]" />
-                <span className="font-sans text-[10px] font-extrabold uppercase tracking-[0.16em] text-[#48523B]">
+                <MapPinned className="h-4 w-4 text-[#AB907B]" />
+                <span className="font-sans text-[10px] font-extrabold uppercase tracking-[0.16em] text-[#AB907B]">
                   Cobertura no Rio Grande do Sul
                 </span>
               </div>
@@ -96,8 +96,8 @@ export default function ServiceArea() {
               >
                 <path
                   d={RS_OUTLINE}
-                  fill="#AAB594"
-                  stroke="#48523B"
+                  fill="#D4BCAE"
+                  stroke="#AB907B"
                   strokeWidth="10"
                   strokeLinejoin="round"
                 />
@@ -105,8 +105,8 @@ export default function ServiceArea() {
                   <path
                     key={index}
                     d={path}
-                    fill="#E13232"
-                    stroke="#F3F1EB"
+                    fill="#851A21"
+                    stroke="#F5E9DD"
                     strokeWidth="4"
                     strokeLinejoin="round"
                   />
@@ -114,8 +114,8 @@ export default function ServiceArea() {
               </svg>
 
               <div className="mt-4 flex items-center gap-3 border-t border-black/10 pt-4">
-                <span className="h-3 w-3 rounded-sm bg-[#E13232]" />
-                <span className="font-sans text-[10px] font-bold uppercase tracking-[0.12em] text-[#615F55]">
+                <span className="h-3 w-3 rounded-sm bg-[#851A21]" />
+                <span className="font-sans text-[10px] font-bold uppercase tracking-[0.12em] text-[#6E6A66]">
                   Áreas em vermelho: regiões sem atendimento
                 </span>
               </div>

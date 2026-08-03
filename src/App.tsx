@@ -17,7 +17,7 @@ import Footer from './components/Footer';
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-[#E5E0DC] text-[#000000] selection:bg-[#48523B] selection:text-[#E5E0DC]">
+    <div className="min-h-screen bg-[#F5E9DD] text-[#20201E] selection:bg-[#AB907B] selection:text-white">
       {/* Header component with sticky transition */}
       <Header />
 

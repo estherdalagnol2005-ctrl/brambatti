@@ -8,16 +8,16 @@ import ScrollFadeIn from './ScrollFadeIn';
 
 export default function EcosmeticsPartnership() {
   return (
-    <section id="ecosmetics" className="bg-[#000000] text-[#E5E0DC] py-16 md:py-24 relative overflow-hidden">
+    <section id="ecosmetics" className="bg-[#20201E] text-[#F5E9DD] py-16 md:py-24 relative overflow-hidden">
       {/* Soft gradient backgrounds for premium dark feel */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[70vw] h-[70vw] rounded-full bg-[#48523B]/10 blur-[150px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[70vw] h-[70vw] rounded-full bg-[#AB907B]/10 blur-[150px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         
         {/* Horizontal Partnership Lockup Banner */}
         <ScrollFadeIn delay={100} className="w-full">
           <div className="flex flex-col items-center justify-center text-center">
-            <span className="font-sans text-[10px] tracking-widest uppercase text-[#48523B] font-extrabold mb-6">
+            <span className="font-sans text-[10px] tracking-widest uppercase text-[#D4BCAE] font-extrabold mb-6">
               Parceria Oficial RS
             </span>
             
@@ -36,4 +36,3 @@ export default function EcosmeticsPartnership() {
     </section>
   );
 }
-

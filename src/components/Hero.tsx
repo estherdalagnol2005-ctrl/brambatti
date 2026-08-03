@@ -16,7 +16,7 @@ export default function Hero() {
   return (
     <section
       id="inicio"
-      className="relative min-h-[100dvh] bg-[#000000] pt-28 pb-7 lg:pt-32 lg:pb-28 overflow-hidden flex items-end"
+      className="relative min-h-[100dvh] bg-[#20201E] pt-28 pb-7 lg:pt-32 lg:pb-28 overflow-hidden flex items-end"
     >
       {/* Imagem de Fundo em Sangria Total (Full-bleed Background Image) */}
       <div className="absolute inset-0 z-0 overflow-hidden">
@@ -52,7 +52,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
-            className="font-sans text-[9px] lg:text-[10px] tracking-[0.18em] uppercase text-[#E5E0DC]/90 font-semibold mb-4 lg:mb-6 block drop-shadow-[0_2px_6px_rgba(0,0,0,0.75)]"
+            className="font-sans text-[9px] lg:text-[10px] tracking-[0.18em] uppercase text-[#F5E9DD]/90 font-semibold mb-4 lg:mb-6 block drop-shadow-[0_2px_6px_rgba(0,0,0,0.75)]"
           >
             DISTRIBUIDORA OFICIAL ECOSMETICS NO RS
           </motion.span>
@@ -66,7 +66,7 @@ export default function Hero() {
             className="font-serif font-light text-white text-[36px] lg:text-[56px] leading-[1.0] mb-5 lg:mb-[28px] tracking-tight max-w-[320px] lg:max-w-none drop-shadow-[0_3px_10px_rgba(0,0,0,0.8)]"
           >
             Feito para{' '}
-            <span className="italic font-normal text-[#B8C69F] drop-shadow-[0_2px_14px_rgba(184,198,159,0.28)]">
+            <span className="italic font-normal text-[#D4BCAE] drop-shadow-[0_2px_14px_rgba(212,188,174,0.28)]">
               profissionais
             </span>{' '}
             <br className="hidden lg:block" /> que querem crescer.
@@ -83,7 +83,7 @@ export default function Hero() {
             <button
               id="hero-primary-btn"
               onClick={handlePrimaryClick}
-              className="bg-[#48523B] hover:bg-[#3d4532] text-white font-sans text-[11px] lg:text-[12px] uppercase tracking-[0.15em] font-bold h-[44px] px-6 rounded-none transition-all duration-300 shadow-md flex items-center justify-center gap-2 w-full lg:w-auto hover:scale-[1.01] active:scale-[0.99]"
+              className="bg-[#AB907B] hover:bg-[#6E6A66] text-white font-sans text-[11px] lg:text-[12px] uppercase tracking-[0.15em] font-bold h-[44px] px-6 rounded-none transition-all duration-300 shadow-md flex items-center justify-center gap-2 w-full lg:w-auto hover:scale-[1.01] active:scale-[0.99]"
             >
               Falar com um consultor
               <ArrowRight className="w-3.5 h-3.5" />
@@ -92,7 +92,7 @@ export default function Hero() {
             <a
               id="hero-secondary-btn"
               href="#produtos"
-              className="text-[#E5E0DC]/90 hover:text-white font-sans text-[11px] lg:text-[12px] uppercase tracking-[0.15em] font-bold py-2.5 px-4 transition-all duration-300 flex items-center justify-center w-full lg:w-auto hover:underline decoration-[#E5E0DC]/30 underline-offset-4 drop-shadow-[0_2px_6px_rgba(0,0,0,0.75)]"
+              className="text-[#F5E9DD]/90 hover:text-white font-sans text-[11px] lg:text-[12px] uppercase tracking-[0.15em] font-bold py-2.5 px-4 transition-all duration-300 flex items-center justify-center w-full lg:w-auto hover:underline decoration-[#F5E9DD]/30 underline-offset-4 drop-shadow-[0_2px_6px_rgba(0,0,0,0.75)]"
             >
               Conhecer produtos
             </a>

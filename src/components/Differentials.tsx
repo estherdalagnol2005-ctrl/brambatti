@@ -64,10 +64,10 @@ export default function Differentials() {
   ];
 
   return (
-    <section id="diferenciais" className="bg-[#262D20] text-[#E5E0DC] py-20 md:py-28 relative overflow-hidden">
+    <section id="diferenciais" className="bg-[#20201E] text-[#F5E9DD] py-20 md:py-28 relative overflow-hidden">
       {/* Background visual accents */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-[#48523B]/10 rounded-full filter blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#1F241A]/30 rounded-full filter blur-[120px] pointer-events-none" />
+      <div className="absolute top-0 right-0 w-96 h-96 bg-[#AB907B]/12 rounded-full filter blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#424139]/35 rounded-full filter blur-[120px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         
@@ -78,14 +78,14 @@ export default function Differentials() {
           <div className="lg:col-span-5 lg:sticky lg:top-24 flex flex-col justify-between">
             <ScrollFadeIn delay={100} className="w-full">
               <div>
-                <span className="font-sans text-[10px] tracking-[0.25em] uppercase text-[#B2B9A6] font-bold block mb-3">
+                <span className="font-sans text-[10px] tracking-[0.25em] uppercase text-[#D4BCAE] font-bold block mb-3">
                   POR QUE A BRAMBATTI?
                 </span>
                 <h2 className="font-serif font-light text-3xl sm:text-4xl lg:text-5xl tracking-tight text-white leading-tight mb-6">
                   Uma relação de <br />
-                  <span className="italic font-normal text-[#B2B9A6]">evolução mútua.</span>
+                  <span className="italic font-normal text-[#D4BCAE]">evolução mútua.</span>
                 </h2>
-                <p className="font-sans text-sm text-[#E5E0DC]/80 leading-relaxed mb-8 max-w-md">
+                <p className="font-sans text-sm text-[#F5E9DD]/80 leading-relaxed mb-8 max-w-md">
                   Eliminamos os processos impessoais para focar no que realmente importa: presença ativa, entregas céleres e a capacitação real de cada profissional parceiro.
                 </p>
               </div>
@@ -99,14 +99,14 @@ export default function Differentials() {
                   onClick={() => setActiveCard(idx)}
                   className="group flex items-center gap-4 text-left transition-all duration-300"
                 >
-                  <span className={`font-serif italic text-lg transition-colors duration-300 ${activeCard === idx ? 'text-[#FAF8F6] font-semibold' : 'text-white/30 group-hover:text-white/60'}`}>
+                  <span className={`font-serif italic text-lg transition-colors duration-300 ${activeCard === idx ? 'text-white font-semibold' : 'text-white/30 group-hover:text-white/60'}`}>
                     {p.number}
                   </span>
                   <div className="flex flex-col">
                     <span className={`font-sans text-xs tracking-wider uppercase font-bold transition-colors duration-300 ${activeCard === idx ? 'text-white' : 'text-white/40 group-hover:text-white/60'}`}>
                       {p.title.split(' e ')[0].split(' Ágil ')[0].split(' Técnico ')[0]}
                     </span>
-                    <span className={`font-sans text-[10px] transition-colors duration-300 ${activeCard === idx ? 'text-[#B2B9A6]' : 'text-white/20'}`}>
+                    <span className={`font-sans text-[10px] transition-colors duration-300 ${activeCard === idx ? 'text-[#D4BCAE]' : 'text-white/20'}`}>
                       {p.subtitle}
                     </span>
                   </div>
@@ -133,26 +133,26 @@ export default function Differentials() {
                     transition={{ duration: 0.3, ease: 'easeOut' }}
                     className={`cursor-pointer text-left rounded-xl p-6 sm:p-8 border transition-all duration-500 relative overflow-hidden select-none ${
                       isActive 
-                        ? 'bg-[#323C2A] border-[#48523B]/60 shadow-[0_15px_40px_rgba(30,36,25,0.4)]' 
-                        : 'bg-[#21271B]/55 border-white/5 hover:border-white/10 hover:bg-[#21271B]/80'
+                        ? 'bg-[#424139] border-[#AB907B]/60 shadow-[0_15px_40px_rgba(32,32,30,0.45)]'
+                        : 'bg-[#424139]/25 border-white/5 hover:border-white/10 hover:bg-[#424139]/45'
                     }`}
                   >
                     {/* Active Highlight Line */}
                     <div className={`absolute left-0 top-0 bottom-0 w-1 transition-all duration-500 ${
-                      isActive ? 'bg-[#FAF8F6]' : 'bg-transparent'
+                      isActive ? 'bg-[#D4BCAE]' : 'bg-transparent'
                     }`} />
 
                     <div className="flex items-start gap-4 sm:gap-6">
                       {/* Index & Icon */}
                       <div className="flex flex-col items-center gap-2 shrink-0">
                         <span className={`font-serif italic text-base transition-colors duration-300 ${
-                          isActive ? 'text-[#FAF8F6]' : 'text-white/25'
+                          isActive ? 'text-[#F5E9DD]' : 'text-white/25'
                         }`}>
                           {pillar.number}
                         </span>
                         <div className={`w-11 h-11 rounded-xl flex items-center justify-center transition-all duration-500 ${
                           isActive 
-                            ? 'bg-[#48523B] text-white rotate-3 shadow-[0_4px_12px_rgba(72,82,59,0.3)]' 
+                            ? 'bg-[#AB907B] text-white rotate-3 shadow-[0_4px_12px_rgba(171,144,123,0.3)]'
                             : 'bg-white/5 text-white/60'
                         }`}>
                           <Icon className="w-5 h-5" />
@@ -167,13 +167,13 @@ export default function Differentials() {
                           }`}>
                             {pillar.title}
                           </h3>
-                          <span className="font-sans text-[11px] sm:text-xs text-[#B2B9A6] tracking-wide italic mt-0.5">
+                          <span className="font-sans text-[11px] sm:text-xs text-[#D4BCAE] tracking-wide italic mt-0.5">
                             {pillar.subtitle}
                           </span>
                         </div>
 
                         <p className={`font-sans text-xs sm:text-sm leading-relaxed transition-colors duration-300 mb-4 ${
-                          isActive ? 'text-[#E5E0DC]' : 'text-[#E5E0DC]/60'
+                          isActive ? 'text-[#F5E9DD]' : 'text-[#F5E9DD]/60'
                         }`}>
                           {pillar.description}
                         </p>
@@ -195,10 +195,10 @@ export default function Differentials() {
                                     animate={{ x: 0, opacity: 1 }}
                                     transition={{ delay: key * 0.08 }}
                                     key={key}
-                                    className="flex items-start gap-2.5 text-xs text-[#FAF8F6]"
+                                    className="flex items-start gap-2.5 text-xs text-[#F5E9DD]"
                                   >
-                                    <div className="w-4 h-4 rounded-full bg-[#48523B]/50 flex items-center justify-center shrink-0 mt-0.5 border border-[#48523B]">
-                                      <Check className="w-2.5 h-2.5 text-[#FAF8F6]" />
+                                    <div className="w-4 h-4 rounded-full bg-[#AB907B]/50 flex items-center justify-center shrink-0 mt-0.5 border border-[#AB907B]">
+                                      <Check className="w-2.5 h-2.5 text-[#F5E9DD]" />
                                     </div>
                                     <span className="font-sans font-medium">{item}</span>
                                   </motion.li>
@@ -229,8 +229,8 @@ export default function Differentials() {
         <div className="mt-20 border-t border-white/10 pt-10 text-center max-w-3xl mx-auto">
           <ScrollFadeIn delay={200}>
             <div className="flex flex-col items-center gap-4">
-              <Sparkles className="w-5 h-5 text-[#B2B9A6]/40" />
-              <p className="font-serif italic text-base sm:text-lg lg:text-xl text-[#E5E0DC]/75 leading-relaxed">
+              <Sparkles className="w-5 h-5 text-[#D4BCAE]/40" />
+              <p className="font-display text-base sm:text-lg lg:text-xl text-[#F5E9DD]/75 leading-relaxed">
                 “Nossa parceria vai muito além da entrega: estamos presentes no dia a dia do seu espaço para impulsionar a sua evolução técnica e comercial.”
               </p>
             </div>

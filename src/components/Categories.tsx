@@ -84,22 +84,22 @@ export default function Categories() {
   };
 
   return (
-    <section id="categorias" className="bg-[#FAF8F6] py-20 md:py-28 relative">
+    <section id="categorias" className="bg-white py-20 md:py-28 relative">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         {/* Section Header with Skincare Editorial Style */}
         <ScrollFadeIn delay={100} className="w-full">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
             <div className="max-w-xl">
-              <span className="font-serif italic text-lg text-[#48523B] block mb-2">
+              <span className="font-serif text-lg text-[#AB907B] block mb-2">
                 Transformação Capilar
               </span>
-              <h2 className="font-sans font-extrabold text-3xl sm:text-4xl tracking-tight text-[#000000] uppercase leading-tight">
+              <h2 className="font-sans font-extrabold text-3xl sm:text-4xl tracking-tight text-[#20201E] uppercase leading-tight">
                 Categorias <br />
-                <span className="text-[#615F55]">de Alta Performance</span>
+                <span className="text-[#6E6A66]">de Alta Performance</span>
               </h2>
             </div>
             <div className="max-w-md">
-              <p className="font-sans text-xs sm:text-sm text-[#615F55] leading-relaxed">
+              <p className="font-sans text-xs sm:text-sm text-[#6E6A66] leading-relaxed">
                 Descubra soluções criadas para impulsionar a lucratividade do seu salão e gerar fidelidade real através de resultados surpreendentes em cada aplicação.
               </p>
             </div>
@@ -112,7 +112,7 @@ export default function Categories() {
             <ScrollFadeIn
               key={cat.id}
               delay={150 + idx * 80}
-              className={`group relative overflow-hidden rounded-lg cursor-pointer bg-white shadow-sm border border-[#615F55]/5 flex flex-col justify-between ${cat.gridClass}`}
+              className={`group relative overflow-hidden rounded-lg cursor-pointer bg-white shadow-sm border border-[#6E6A66]/5 flex flex-col justify-between ${cat.gridClass}`}
             >
               <div 
                 onClick={() => handleCategoryClick(cat.whatsappMessage)}
@@ -131,8 +131,8 @@ export default function Categories() {
                   />
 
                   {/* Overlaid Elegant Text */}
-                  <div className="absolute inset-x-0 bottom-0 p-6 sm:p-8 z-20 flex flex-col items-start text-[#E5E0DC]">
-                    <span className="font-sans text-[9px] tracking-widest uppercase font-bold text-[#FAF8F6]/80 mb-2 block">
+                  <div className="absolute inset-x-0 bottom-0 p-6 sm:p-8 z-20 flex flex-col items-start text-[#F5E9DD]">
+                    <span className="font-sans text-[9px] tracking-widest uppercase font-bold text-white/80 mb-2 block">
                       {cat.subtitle}
                     </span>
                     
@@ -141,11 +141,11 @@ export default function Categories() {
                       {cat.name}
                     </h3>
 
-                    <p className="font-sans text-xs text-[#E5E0DC]/90 leading-relaxed max-w-sm mb-4 line-clamp-2 md:line-clamp-none opacity-90 group-hover:opacity-100 transition-opacity">
+                    <p className="font-sans text-xs text-[#F5E9DD]/90 leading-relaxed max-w-sm mb-4 line-clamp-2 md:line-clamp-none opacity-90 group-hover:opacity-100 transition-opacity">
                       {cat.description}
                     </p>
 
-                    <div className="flex items-center gap-1.5 font-sans text-[10px] tracking-widest uppercase font-extrabold text-white group-hover:text-[#E5E0DC]/90 mt-1 transition-colors">
+                    <div className="flex items-center gap-1.5 font-sans text-[10px] tracking-widest uppercase font-extrabold text-white group-hover:text-[#F5E9DD]/90 mt-1 transition-colors">
                       <span>Consultar Linha</span>
                       {/* Arrow animation appearing and shifting */}
                       <ArrowUpRight className="w-3.5 h-3.5 transform translate-x-0 translate-y-0 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />

@@ -72,10 +72,10 @@ function CourseCard({ course }: { course: Course }) {
       href={getWhatsAppLink(whatsAppMessage)}
       target="_blank"
       rel="noopener noreferrer"
-      className="group flex h-full flex-col overflow-hidden rounded-lg border border-[#615F55]/10 bg-[#FAF8F6] transition-all duration-500 hover:-translate-y-1 hover:border-[#48523B]/30 hover:shadow-[0_18px_45px_rgba(72,82,59,0.10)] lg:flex-row lg:items-start"
+      className="group flex h-full flex-col overflow-hidden rounded-lg border border-[#6E6A66]/10 bg-white transition-all duration-500 hover:-translate-y-1 hover:border-[#AB907B]/30 hover:shadow-[0_18px_45px_rgba(171,144,123,0.16)] lg:flex-row lg:items-start"
       aria-label={`Saiba mais sobre o curso ${course.name} em ${course.city}`}
     >
-      <div className="aspect-[4/5] shrink-0 overflow-hidden bg-[#E5E0DC] lg:m-5 lg:mr-0 lg:w-[36%] lg:rounded-md">
+      <div className="aspect-[4/5] shrink-0 overflow-hidden bg-[#F5E9DD] lg:m-5 lg:mr-0 lg:w-[36%] lg:rounded-md">
         <img
           src={course.image}
           alt={`Curso ${course.name} com ${course.instructor}, em ${course.city}, dia ${course.date}`}
@@ -85,27 +85,27 @@ function CourseCard({ course }: { course: Course }) {
 
       <div className="flex flex-1 flex-col p-5 sm:p-6 lg:p-5">
         <div className="flex-1">
-          <span className="mb-2 block font-sans text-[9px] font-black uppercase tracking-[0.2em] text-[#48523B]">
+          <span className="mb-2 block font-sans text-[9px] font-black uppercase tracking-[0.2em] text-[#AB907B]">
             {course.category}
           </span>
 
-          <h3 className="font-serif text-lg font-normal leading-snug text-black transition-colors duration-300 group-hover:text-[#48523B] md:text-xl">
+          <h3 className="font-serif text-lg font-normal leading-snug text-[#20201E] transition-colors duration-300 group-hover:text-[#AB907B] md:text-xl">
             {course.name}
           </h3>
 
-          <p className="mt-2 font-sans text-xs font-semibold uppercase tracking-wider text-[#615F55]">
+          <p className="mt-2 font-sans text-xs font-semibold uppercase tracking-wider text-[#6E6A66]">
             Com {course.instructor}
           </p>
 
-          <ul className="mt-5 grid gap-2 border-t border-[#615F55]/10 pt-5 lg:mt-4 lg:gap-1.5 lg:pt-4">
+          <ul className="mt-5 grid gap-2 border-t border-[#6E6A66]/10 pt-5 lg:mt-4 lg:gap-1.5 lg:pt-4">
             {course.topics.map((topic) => (
               <li
                 key={topic}
-                className="flex items-start gap-2 font-sans text-xs leading-relaxed text-[#615F55] lg:text-[11px]"
+                className="flex items-start gap-2 font-sans text-xs leading-relaxed text-[#6E6A66] lg:text-[11px]"
               >
                 <span
                   aria-hidden="true"
-                  className="mt-[0.48rem] h-1 w-1 shrink-0 rounded-full bg-[#48523B]"
+                  className="mt-[0.48rem] h-1 w-1 shrink-0 rounded-full bg-[#AB907B]"
                 />
                 {topic}
               </li>
@@ -113,25 +113,25 @@ function CourseCard({ course }: { course: Course }) {
           </ul>
         </div>
 
-        <div className="mt-6 grid gap-3 border-t border-[#615F55]/10 pt-5 lg:mt-4 lg:pt-4">
+        <div className="mt-6 grid gap-3 border-t border-[#6E6A66]/10 pt-5 lg:mt-4 lg:pt-4">
           <div className="flex items-center justify-between gap-3">
-            <span className="flex items-center gap-1.5 font-sans text-[10px] font-semibold uppercase tracking-wider text-[#615F55]">
-              <CalendarDays className="h-3.5 w-3.5 text-[#48523B]" />
+            <span className="flex items-center gap-1.5 font-sans text-[10px] font-semibold uppercase tracking-wider text-[#6E6A66]">
+              <CalendarDays className="h-3.5 w-3.5 text-[#AB907B]" />
               {course.date}
             </span>
 
-            <span className="rounded-sm bg-[#48523B]/10 px-2 py-0.5 text-[8px] font-extrabold uppercase tracking-wider text-[#48523B]">
+            <span className="rounded-sm bg-[#AB907B]/10 px-2 py-0.5 text-[8px] font-extrabold uppercase tracking-wider text-[#AB907B]">
               {course.slots}
             </span>
           </div>
 
-          <span className="flex items-center gap-1.5 font-sans text-[10px] font-semibold uppercase tracking-wider text-[#615F55]">
-            <MapPin className="h-3.5 w-3.5 text-[#48523B]" />
+          <span className="flex items-center gap-1.5 font-sans text-[10px] font-semibold uppercase tracking-wider text-[#6E6A66]">
+            <MapPin className="h-3.5 w-3.5 text-[#AB907B]" />
             {course.city}
           </span>
         </div>
 
-        <div className="mt-5 flex items-center justify-between border-t border-[#615F55]/10 pt-4 text-[11px] font-bold uppercase tracking-widest text-[#48523B] transition-colors group-hover:text-black lg:mt-4 lg:pt-3">
+        <div className="mt-5 flex items-center justify-between border-t border-[#6E6A66]/10 pt-4 text-[11px] font-bold uppercase tracking-widest text-[#AB907B] transition-colors group-hover:text-[#20201E] lg:mt-4 lg:pt-3">
           <span>Quero participar</span>
           <div className="flex items-center gap-1">
             <GraduationCap className="h-4 w-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
@@ -147,7 +147,7 @@ export default function Courses() {
   return (
     <section
       id="cursos"
-      className="relative overflow-hidden border-t border-[#615F55]/10 bg-white py-20 md:py-28"
+      className="relative overflow-hidden border-t border-[#6E6A66]/10 bg-[#F5E9DD] py-20 md:py-28"
     >
       <div className="pointer-events-none absolute inset-0 z-0 opacity-[0.02]">
         <svg className="h-full w-full" xmlns="http://www.w3.org/2000/svg">
@@ -161,7 +161,7 @@ export default function Courses() {
               <path
                 d="M 60 0 L 0 0 0 60"
                 fill="none"
-                stroke="#48523B"
+                stroke="#AB907B"
                 strokeWidth="1"
               />
             </pattern>
@@ -174,13 +174,13 @@ export default function Courses() {
         <ScrollFadeIn delay={100} className="w-full">
           <div className="mb-12 md:mb-16">
             <div className="max-w-xl">
-              <span className="mb-3 block font-sans text-[10px] font-bold uppercase tracking-[0.25em] text-[#48523B]">
+              <span className="mb-3 block font-sans text-[10px] font-bold uppercase tracking-[0.25em] text-[#AB907B]">
                 Cursos e capacitações
               </span>
 
-              <h2 className="font-serif text-3xl font-light leading-tight tracking-tight text-black sm:text-4xl lg:text-5xl">
+              <h2 className="font-serif text-3xl font-normal leading-tight tracking-tight text-[#20201E] sm:text-4xl lg:text-5xl">
                 Próximos cursos, <br />
-                <span className="font-normal italic text-[#48523B]">
+                <span className="font-normal italic text-[#AB907B]">
                   novas possibilidades.
                 </span>
               </h2>
@@ -212,12 +212,12 @@ export default function Courses() {
             ))}
           </div>
 
-          <p className="mt-1 text-center font-sans text-[9px] font-semibold uppercase tracking-[0.18em] text-[#615F55]/70">
+          <p className="mt-1 text-center font-sans text-[9px] font-semibold uppercase tracking-[0.18em] text-[#6E6A66]/70">
             Deslize para ver os cursos
           </p>
         </div>
 
-        <div className="mt-16 flex flex-col items-center gap-6 border-t border-[#615F55]/15 pt-12">
+        <div className="mt-16 flex flex-col items-center gap-6 border-t border-[#6E6A66]/15 pt-12">
           <ScrollFadeIn delay={200}>
             <div className="text-center">
               <a
@@ -226,7 +226,7 @@ export default function Courses() {
                 )}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center gap-3 bg-[#48523B] px-10 py-4 font-sans text-xs font-extrabold uppercase tracking-widest text-white shadow-md transition-all duration-300 hover:bg-[#30372A]"
+                className="group inline-flex items-center gap-3 bg-[#AB907B] px-10 py-4 font-sans text-xs font-extrabold uppercase tracking-widest text-white shadow-md transition-all duration-300 hover:bg-[#424139]"
               >
                 Ver agenda de cursos
                 <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
@@ -235,7 +235,7 @@ export default function Courses() {
           </ScrollFadeIn>
 
           <ScrollFadeIn delay={300}>
-            <p className="mt-2 text-center font-serif text-sm italic tracking-wide text-[#48523B] md:text-base">
+            <p className="mt-2 text-center font-display text-sm tracking-wide text-[#6E6A66] md:text-base">
               Aprender também faz parte da transformação.
             </p>
           </ScrollFadeIn>

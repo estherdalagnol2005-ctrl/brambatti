@@ -1,23 +1,41 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'Rasther';
+  src: url('./assets/fonts/Rasther.otf') format('opentype');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Creato Display';
+  src: url('./assets/fonts/CreatoDisplay-Thin.otf') format('opentype');
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+}
+
 @theme {
-  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-serif: 'Georgia', serif;
-  --font-display: 'Georgia', serif;
+  --font-sans: 'Encode Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-serif: 'Rasther', 'Times New Roman', serif;
+  --font-display: 'Creato Display', 'Encode Sans', sans-serif;
   
-  --color-brand-offwhite: #E5E0DC;
-  --color-brand-warmgray: #615F55;
-  --color-brand-black: #000000;
-  --color-brand-olive: #48523B;
-  --color-brand-olivedark: #30372A;
+  --color-brand-charcoal: #20201E;
+  --color-brand-deep: #424139;
+  --color-brand-stone: #6E6A66;
+  --color-brand-white: #FFFFFF;
+  --color-brand-camel: #AB907B;
+  --color-brand-blush: #D4BCAE;
+  --color-brand-cream: #F5E9DD;
 }
 
 /* Base custom styles to guarantee professional rendering and reset */
 html {
   scroll-behavior: smooth;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  background-color: #E5E0DC;
-  color: #000000;
+  font-family: 'Encode Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #F5E9DD;
+  color: #20201E;
 }
 
 body {
@@ -29,14 +47,14 @@ body {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #E5E0DC;
+  background: #F5E9DD;
 }
 ::-webkit-scrollbar-thumb {
-  background: #48523B;
+  background: #AB907B;
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #30372A;
+  background: #424139;
 }
 
 /* Custom styles for editorial layout and seamless animations */

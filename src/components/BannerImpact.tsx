@@ -31,8 +31,8 @@ export default function BannerImpact() {
           {/* Accent small line */}
           <ScrollFadeIn delay={100}>
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-8 h-[1px] bg-[#E5E0DC]" />
-              <span className="font-sans text-[10px] tracking-[0.25em] uppercase text-[#E5E0DC] font-extrabold">
+              <div className="w-8 h-[1px] bg-[#D4BCAE]" />
+              <span className="font-sans text-[10px] tracking-[0.25em] uppercase text-[#F5E9DD] font-extrabold">
                 Padrão Ecosmetics de Qualidade
               </span>
             </div>
@@ -42,13 +42,13 @@ export default function BannerImpact() {
           <ScrollFadeIn delay={200}>
             <h2 className="font-serif font-light text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white tracking-tight leading-[1.15] mb-6">
               Performance que aparece <br />
-              <span className="italic font-normal text-[#E5E0DC]">em cada resultado.</span>
+              <span className="italic font-normal text-[#D4BCAE]">em cada resultado.</span>
             </h2>
           </ScrollFadeIn>
 
           {/* Subtext */}
           <ScrollFadeIn delay={300}>
-            <p className="font-sans text-xs sm:text-sm text-[#E5E0DC]/85 max-w-lg mb-8 leading-relaxed">
+            <p className="font-sans text-xs sm:text-sm text-[#F5E9DD]/85 max-w-lg mb-8 leading-relaxed">
               Sua cliente sabe diferenciar o comum do extraordinário. Entregue a excelência cosmética que consagra sua autoridade técnica e valoriza seu trabalho de estilista capilar.
             </p>
           </ScrollFadeIn>
@@ -58,7 +58,7 @@ export default function BannerImpact() {
             <button
               id="banner-impact-cta"
               onClick={handleButtonClick}
-              className="bg-[#48523B] hover:bg-[#30372A] text-[#E5E0DC] font-sans text-xs uppercase tracking-widest font-extrabold py-4 px-8 rounded-none transition-all duration-300 shadow-md focus:ring-1 focus:ring-[#48523B]"
+              className="bg-[#AB907B] hover:bg-[#424139] text-white font-sans text-xs uppercase tracking-widest font-extrabold py-4 px-8 rounded-none transition-all duration-300 shadow-md focus:ring-1 focus:ring-[#AB907B]"
             >
               Agendar Visita Comercial
             </button>
