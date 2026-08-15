@@ -2,17 +2,17 @@
 
 > Site oficial da Brambatti Distribuidora, distribuidora autorizada Ecosmetics com atendimento comercial no Rio Grande do Sul para profissionais da beleza.
 
-Canonical URL: https://brambatti.vercel.app/
+Canonical URL: https://www.brambattidistribuidorars.com.br/
 Language: Portuguese (Brazil)
 
 ## Main sections
 
-- Home: https://brambatti.vercel.app/#inicio
-- About Brambatti: https://brambatti.vercel.app/#sobre
-- Professional product categories: https://brambatti.vercel.app/#produtos
-- Courses and professional training: https://brambatti.vercel.app/#cursos
-- Commercial service area: https://brambatti.vercel.app/#atendimento
-- Contact information: https://brambatti.vercel.app/#contato
+- Home: https://www.brambattidistribuidorars.com.br/#inicio
+- About Brambatti: https://www.brambattidistribuidorars.com.br/#sobre
+- Professional product categories: https://www.brambattidistribuidorars.com.br/#produtos
+- Courses and professional training: https://www.brambattidistribuidorars.com.br/#cursos
+- Commercial service area: https://www.brambattidistribuidorars.com.br/#atendimento
+- Contact information: https://www.brambattidistribuidorars.com.br/#contato
 
 ## Business information
 
