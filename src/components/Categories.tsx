@@ -5,11 +5,12 @@
 
 import { ArrowUpRight } from 'lucide-react';
 import ScrollFadeIn from './ScrollFadeIn';
-import coloracaoImg from '../assets/images/cat_coloracao.jpg';
-import descoloracaoImg from '../assets/images/cat_descoloracao.jpg';
-import shampoosImg from '../assets/images/cat_shampoos.jpg';
-import tratamentosImg from '../assets/images/cat_tratamentos.jpg';
-import finalizacaoImg from '../assets/images/cat_finalizacao.jpg';
+import { getWhatsAppLink } from '../data';
+import coloracaoImg from '../assets/images/cat_coloracao.webp';
+import descoloracaoImg from '../assets/images/cat_descoloracao.webp';
+import shampoosImg from '../assets/images/cat_shampoos.webp';
+import tratamentosImg from '../assets/images/cat_tratamentos.webp';
+import finalizacaoImg from '../assets/images/cat_finalizacao.webp';
 
 interface CategoryItem {
   id: string;
@@ -21,8 +22,6 @@ interface CategoryItem {
   gridClass: string;
   aspectClass: string;
 }
-
-const CATEGORY_WHATSAPP_LINK_BASE = 'https://wa.me/555492673323';
 
 export default function Categories() {
   const categories: CategoryItem[] = [
@@ -78,13 +77,8 @@ export default function Categories() {
     },
   ];
 
-  const handleCategoryClick = (message: string) => {
-    const whatsappLink = `${CATEGORY_WHATSAPP_LINK_BASE}?text=${encodeURIComponent(message)}`;
-    window.open(whatsappLink, '_blank', 'noopener,noreferrer');
-  };
-
   return (
-    <section id="categorias" className="bg-white py-20 md:py-28 relative">
+    <section id="produtos" className="bg-white py-20 md:py-28 relative">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         {/* Section Header with Skincare Editorial Style */}
         <ScrollFadeIn delay={100} className="w-full">
@@ -114,8 +108,11 @@ export default function Categories() {
               delay={150 + idx * 80}
               className={`group relative overflow-hidden rounded-lg cursor-pointer bg-white shadow-sm border border-[#6E6A66]/5 flex flex-col justify-between ${cat.gridClass}`}
             >
-              <div 
-                onClick={() => handleCategoryClick(cat.whatsappMessage)}
+              <a
+                href={getWhatsAppLink(cat.whatsappMessage)}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Consultar a linha ${cat.name} pelo WhatsApp`}
                 className="w-full h-full"
               >
                 {/* Image with subtle zoom hover */}
@@ -125,8 +122,9 @@ export default function Categories() {
                   
                   <img
                     src={cat.image}
-                    alt={cat.name}
-                    referrerPolicy="no-referrer"
+                    alt={`Linha profissional de ${cat.name} Ecosmetics`}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover transform scale-100 group-hover:scale-104 transition-transform duration-700 ease-out"
                   />
 
@@ -152,7 +150,7 @@ export default function Categories() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </a>
             </ScrollFadeIn>
           ))}
         </div>

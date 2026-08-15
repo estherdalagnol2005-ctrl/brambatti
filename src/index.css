@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: 'Rasther';
-  src: url('./assets/fonts/Rasther.otf') format('opentype');
+  src: url('./assets/fonts/Rasther.woff') format('woff');
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -10,7 +10,7 @@
 
 @font-face {
   font-family: 'Creato Display';
-  src: url('./assets/fonts/CreatoDisplay-Thin.otf') format('opentype');
+  src: url('./assets/fonts/CreatoDisplay-Thin.woff') format('woff');
   font-style: normal;
   font-weight: 100;
   font-display: swap;

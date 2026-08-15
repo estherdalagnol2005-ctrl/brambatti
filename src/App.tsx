@@ -11,7 +11,7 @@ import BannerImpact from './components/BannerImpact';
 import Courses from './components/Courses';
 import Differentials from './components/Differentials';
 import About from './components/About';
-import ServiceAreaCopy from './components/ServiceAreaCopy';
+import ServiceArea from './components/ServiceArea';
 import CtaFinal from './components/CtaFinal';
 import Footer from './components/Footer';
 
@@ -44,7 +44,7 @@ export default function App() {
         <Differentials />
 
         {/* State delivery coverage / regional service viewer */}
-        <ServiceAreaCopy />
+        <ServiceArea />
 
         {/* Direct WhatsApp Call to Action segment */}
         <CtaFinal />
