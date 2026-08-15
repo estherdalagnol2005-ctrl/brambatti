@@ -5,7 +5,7 @@
 
 import { getWhatsAppLink } from '../data';
 import ScrollFadeIn from './ScrollFadeIn';
-import impactImage from '../assets/images/padrao_ecosmetics.jpg';
+import impactImage from '../assets/images/padrao_ecosmetics.webp';
 
 export default function BannerImpact() {
   const handleButtonClick = () => {
@@ -20,7 +20,10 @@ export default function BannerImpact() {
         <img
           src={impactImage}
           alt="Cabelo loiro perfeito de alta costura em salão profissional"
-          referrerPolicy="no-referrer"
+          width="735"
+          height="1103"
+          loading="lazy"
+          decoding="async"
           className="w-full h-full object-cover transform scale-102 hover:scale-105 transition-transform duration-[4000ms] ease-out"
         />
       </div>

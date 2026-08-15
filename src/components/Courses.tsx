@@ -79,6 +79,10 @@ function CourseCard({ course }: { course: Course }) {
         <img
           src={course.image}
           alt={`Curso ${course.name} com ${course.instructor}, em ${course.city}, dia ${course.date}`}
+          width="1080"
+          height="1350"
+          loading="lazy"
+          decoding="async"
           className="h-full w-full object-cover"
         />
       </div>

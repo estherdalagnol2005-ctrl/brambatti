@@ -65,13 +65,15 @@ export default function Header() {
             <img
               src={logoImg}
               alt="Brambatti Distribuidora"
-              referrerPolicy="no-referrer"
+              width="601"
+              height="600"
+              decoding="async"
               className="h-[34px] lg:h-[42px] w-auto object-contain block transition-transform duration-300 group-hover:scale-[1.01] my-0 py-0"
             />
           </a>
 
           {/* Desktop Navigation Links */}
-          <nav id="desktop-nav" className="hidden lg:flex items-center gap-[32px] my-0 py-0">
+          <nav id="desktop-nav" aria-label="Navegação principal" className="hidden lg:flex items-center gap-[32px] my-0 py-0">
             {navLinks.map((link) => (
               <a
                 key={link.label}
@@ -98,9 +100,12 @@ export default function Header() {
           {/* Mobile Menu Trigger (Hamburger Button) */}
           <button
             id="mobile-menu-trigger"
+            type="button"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="lg:hidden w-[40px] h-[40px] flex items-center justify-center p-0 text-[#20201E] hover:text-[#AB907B] focus:outline-none bg-transparent my-0"
-            aria-label="Toggle menu"
+            aria-label={isMobileMenuOpen ? 'Fechar menu' : 'Abrir menu'}
+            aria-expanded={isMobileMenuOpen}
+            aria-controls="mobile-drawer"
           >
             {isMobileMenuOpen ? (
               <X className="w-[22px] h-[22px]" strokeWidth={1.5} />
@@ -124,7 +129,7 @@ export default function Header() {
             className="fixed inset-0 z-40 bg-[#F5E9DD] pt-24 px-6 md:px-12 flex flex-col justify-between pb-12 lg:hidden"
           >
             <div className="flex flex-col gap-6">
-              <nav className="flex flex-col gap-4">
+              <nav aria-label="Navegação móvel" className="flex flex-col gap-4">
                 {navLinks.map((link, idx) => (
                   <motion.a
                     key={link.label}

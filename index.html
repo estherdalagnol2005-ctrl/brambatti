@@ -3,31 +3,201 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script>
-      (function() {
-        try {
-          var _fetch = window.fetch;
-          Object.defineProperty(window, 'fetch', {
-            get: function() {
-              return _fetch;
+
+    <title>Brambatti Distribuidora | Cosméticos Profissionais no RS</title>
+    <meta
+      name="description"
+      content="Distribuidora oficial Ecosmetics no Rio Grande do Sul. Produtos, suporte técnico, cursos e atendimento comercial para cabeleireiros e salões."
+    />
+    <meta name="author" content="Brambatti Distribuidora" />
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
+    <meta
+      name="googlebot"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
+    <meta name="theme-color" content="#20201E" />
+    <meta name="color-scheme" content="light" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    <link rel="canonical" href="https://brambatti.vercel.app/" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="Brambatti Distribuidora" />
+    <meta
+      property="og:title"
+      content="Brambatti Distribuidora | Cosméticos Profissionais no RS"
+    />
+    <meta
+      property="og:description"
+      content="Distribuidora oficial Ecosmetics no Rio Grande do Sul. Produtos, suporte técnico, cursos e atendimento comercial para profissionais da beleza."
+    />
+    <meta property="og:url" content="https://brambatti.vercel.app/" />
+    <meta property="og:image" content="https://brambatti.vercel.app/og-brambatti.jpg" />
+    <meta property="og:image:secure_url" content="https://brambatti.vercel.app/og-brambatti.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Representantes da Brambatti Distribuidora em sua sede no Rio Grande do Sul"
+    />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Brambatti Distribuidora | Cosméticos Profissionais no RS"
+    />
+    <meta
+      name="twitter:description"
+      content="Distribuidora oficial Ecosmetics no Rio Grande do Sul para cabeleireiros e salões de beleza."
+    />
+    <meta name="twitter:image" content="https://brambatti.vercel.app/og-brambatti.jpg" />
+    <meta
+      name="twitter:image:alt"
+      content="Representantes da Brambatti Distribuidora em sua sede no Rio Grande do Sul"
+    />
+
+    <!--
+      Google Search Console:
+      se a verificação escolhida for pela tag HTML, descomente a linha abaixo e
+      substitua TOKEN_DO_SEARCH_CONSOLE pelo token fornecido pelo Google.
+    -->
+    <!-- <meta name="google-site-verification" content="TOKEN_DO_SEARCH_CONSOLE" /> -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="/src/assets/images/hero_mobile_optimized.webp"
+      media="(max-width: 1023px)"
+      fetchpriority="high"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="/src/assets/images/hero_desktop_novo.webp"
+      media="(min-width: 1024px)"
+      fetchpriority="high"
+    />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://brambatti.vercel.app/#website",
+            "url": "https://brambatti.vercel.app/",
+            "name": "Brambatti Distribuidora",
+            "description": "Distribuidora oficial Ecosmetics no Rio Grande do Sul para profissionais da beleza.",
+            "inLanguage": "pt-BR",
+            "publisher": {
+              "@id": "https://brambatti.vercel.app/#business"
+            }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://brambatti.vercel.app/#webpage",
+            "url": "https://brambatti.vercel.app/",
+            "name": "Brambatti Distribuidora | Cosméticos Profissionais no RS",
+            "description": "Produtos profissionais Ecosmetics, suporte técnico, cursos e atendimento comercial para cabeleireiros e salões no Rio Grande do Sul.",
+            "isPartOf": {
+              "@id": "https://brambatti.vercel.app/#website"
             },
-            set: function(val) {
-              _fetch = val;
+            "about": {
+              "@id": "https://brambatti.vercel.app/#business"
             },
-            configurable: true,
-            enumerable: true
-          });
-        } catch (e) {
-          console.warn('Failed to define fetch setter:', e);
-        }
-      })();
+            "primaryImageOfPage": {
+              "@type": "ImageObject",
+              "url": "https://brambatti.vercel.app/og-brambatti.jpg",
+              "width": 1200,
+              "height": 630
+            },
+            "inLanguage": "pt-BR"
+          },
+          {
+            "@type": ["Organization", "LocalBusiness"],
+            "@id": "https://brambatti.vercel.app/#business",
+            "name": "Brambatti Distribuidora",
+            "description": "Distribuidora oficial e autorizada Ecosmetics no Rio Grande do Sul, com produtos profissionais, suporte técnico, cursos e atendimento comercial para salões de beleza.",
+            "url": "https://brambatti.vercel.app/",
+            "logo": "https://brambatti.vercel.app/favicon.png",
+            "image": "https://brambatti.vercel.app/og-brambatti.jpg",
+            "telephone": "+55 54 99281-9218",
+            "sameAs": [
+              "https://www.instagram.com/brambatti_/"
+            ],
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Estrada Municipal Vicente Menezes, 338 - Linha 40",
+              "addressLocality": "Caxias do Sul",
+              "addressRegion": "RS",
+              "postalCode": "95044-030",
+              "addressCountry": "BR"
+            },
+            "areaServed": {
+              "@type": "AdministrativeArea",
+              "name": "Rio Grande do Sul"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+55 54 99281-9218",
+              "contactType": "atendimento comercial",
+              "areaServed": "BR-RS",
+              "availableLanguage": "Portuguese"
+            },
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Soluções para profissionais da beleza",
+              "itemListElement": [
+                {
+                  "@type": "OfferCatalog",
+                  "name": "Coloração profissional"
+                },
+                {
+                  "@type": "OfferCatalog",
+                  "name": "Descoloração profissional"
+                },
+                {
+                  "@type": "OfferCatalog",
+                  "name": "Tratamentos capilares"
+                },
+                {
+                  "@type": "OfferCatalog",
+                  "name": "Shampoos e condicionadores profissionais"
+                },
+                {
+                  "@type": "OfferCatalog",
+                  "name": "Finalizadores profissionais"
+                }
+              ]
+            }
+          }
+        ]
+      }
     </script>
-    <title>Brambatti Distribuidora | Ecosmetics Rio Grande do Sul</title>
-    <meta name="description" content="Distribuidora oficial de produtos de beleza profissionais Ecosmetics no Rio Grande do Sul. Atendimento exclusivo para cabeleireiros e salões de beleza em Caxias do Sul, Porto Alegre e Serra Gaúcha." />
-    <meta name="keywords" content="distribuidora de cosméticos profissionais no Rio Grande do Sul, Ecosmetics RS, Brambatti, salão de beleza, cabeleireiro profissional, Caxias do Sul, Porto Alegre" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Google tag (gtag.js): carregada uma única vez para toda a aplicação. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RN4NVK5V0Z"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-RN4NVK5V0Z');
+    </script>
   </head>
   <body class="bg-[#F5E9DD] text-[#20201E] antialiased">
     <div id="root"></div>

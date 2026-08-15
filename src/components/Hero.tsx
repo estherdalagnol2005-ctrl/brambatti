@@ -5,12 +5,13 @@
 
 import { motion } from 'motion/react';
 import { ArrowRight } from 'lucide-react';
+import { getWhatsAppLink } from '../data';
 import heroDesktopImg from '../assets/images/hero_desktop_novo.webp';
-import heroMobileImg from '../assets/images/hero_mobile_novo.webp';
+import heroMobileImg from '../assets/images/hero_mobile_optimized.webp';
 
 export default function Hero() {
   const handlePrimaryClick = () => {
-    window.open('https://wa.me/5554992819218', '_blank', 'noopener,noreferrer');
+    window.open(getWhatsAppLink(), '_blank', 'noopener,noreferrer');
   };
 
   return (
@@ -25,7 +26,9 @@ export default function Hero() {
           <img
             id="hero-main-img"
             src={heroMobileImg}
-            alt="Profissionais Brambatti em um ambiente de beleza"
+            alt="Representantes da Brambatti Distribuidora em sua sede"
+            width="1200"
+            height="1800"
             fetchPriority="high"
             decoding="async"
             className="h-full w-full object-cover object-center lg:object-top"

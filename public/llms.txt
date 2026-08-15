@@ -1,0 +1,28 @@
+# Brambatti Distribuidora
+
+> Site oficial da Brambatti Distribuidora, distribuidora autorizada Ecosmetics com atendimento comercial no Rio Grande do Sul para profissionais da beleza.
+
+Canonical URL: https://brambatti.vercel.app/
+Language: Portuguese (Brazil)
+
+## Main sections
+
+- Home: https://brambatti.vercel.app/#inicio
+- About Brambatti: https://brambatti.vercel.app/#sobre
+- Professional product categories: https://brambatti.vercel.app/#produtos
+- Courses and professional training: https://brambatti.vercel.app/#cursos
+- Commercial service area: https://brambatti.vercel.app/#atendimento
+- Contact information: https://brambatti.vercel.app/#contato
+
+## Business information
+
+- Name: Brambatti Distribuidora
+- Service: Professional cosmetics distribution, technical support and training
+- Service area: Rio Grande do Sul, Brazil
+- Address: Estrada Municipal Vicente Menezes, 338 - Linha 40, Caxias do Sul - RS, 95044-030
+- Commercial WhatsApp: +55 54 99281-9218
+- Instagram: https://www.instagram.com/brambatti_/
+
+## Content notes
+
+The site presents Brambatti's history, Ecosmetics professional product categories, courses, business differentiators, service coverage and official contact channels. Commercial availability and course details should be confirmed directly with Brambatti.

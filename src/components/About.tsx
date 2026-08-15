@@ -5,11 +5,8 @@
 
 import { motion } from 'motion/react';
 import ScrollFadeIn from './ScrollFadeIn';
-
-const ESSENCIA_PRIMARY_BASE =
-  'https://lh3.googleusercontent.com/d/1X3n0oTOPFer5RwbLxyLg4zi7SVWldh_t';
-const ESSENCIA_SECONDARY_BASE =
-  'https://lh3.googleusercontent.com/d/1VdwBg-a-KgQ806bsglJedI9rZzhqjzdR';
+import essenceProductsImg from '../assets/images/essencia-produtos.webp';
+import essencePartnershipImg from '../assets/images/essencia-parceria.webp';
 
 export default function About() {
   return (
@@ -32,11 +29,10 @@ export default function About() {
                 className="absolute top-0 left-0 w-[75%] h-[80%] overflow-hidden rounded-lg shadow-md border border-[#AB907B]/10 bg-white"
               >
                 <img
-                  src={`${ESSENCIA_PRIMARY_BASE}=w1800`}
-                  srcSet={`${ESSENCIA_PRIMARY_BASE}=w800 800w, ${ESSENCIA_PRIMARY_BASE}=w1200 1200w, ${ESSENCIA_PRIMARY_BASE}=w1800 1800w, ${ESSENCIA_PRIMARY_BASE}=w2400 2400w`}
-                  sizes="(min-width: 1280px) 430px, (min-width: 1024px) 38vw, 75vw"
-                  alt="Nossa essência gaúcha - Brambatti Distribuidora"
-                  referrerPolicy="no-referrer"
+                  src={essenceProductsImg}
+                  alt="Produtos profissionais Ecosmetics expostos na Brambatti Distribuidora"
+                  width="1600"
+                  height="1067"
                   loading="lazy"
                   decoding="async"
                   className="h-full w-full object-cover object-center transition-transform duration-700 hover:scale-[1.02]"
@@ -52,11 +48,10 @@ export default function About() {
                 className="absolute bottom-0 right-0 w-[48%] h-[55%] overflow-hidden rounded-lg shadow-lg border-2 border-[#F5E9DD] bg-white z-20"
               >
                 <img
-                  src={`${ESSENCIA_SECONDARY_BASE}=w1400`}
-                  srcSet={`${ESSENCIA_SECONDARY_BASE}=w640 640w, ${ESSENCIA_SECONDARY_BASE}=w960 960w, ${ESSENCIA_SECONDARY_BASE}=w1400 1400w, ${ESSENCIA_SECONDARY_BASE}=w1800 1800w`}
-                  sizes="(min-width: 1280px) 280px, (min-width: 1024px) 25vw, 48vw"
-                  alt="Ecosmetics no Rio Grande do Sul - Brambatti"
-                  referrerPolicy="no-referrer"
+                  src={essencePartnershipImg}
+                  alt="Atendimento profissional da Brambatti Distribuidora no Rio Grande do Sul"
+                  width="1200"
+                  height="800"
                   loading="lazy"
                   decoding="async"
                   className="h-full w-full object-cover object-center transition-transform duration-700 hover:scale-[1.02]"

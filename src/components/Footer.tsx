@@ -4,7 +4,7 @@
  */
 
 import { Instagram, MessageSquare, MapPin, ArrowUp, ArrowRight, ShieldCheck } from 'lucide-react';
-import { INSTAGRAM_LINK, ADDRESS_TEXT, MAPS_LINK, getWhatsAppLink, WHATSAPP_LINK_BASE } from '../data';
+import { INSTAGRAM_LINK, ADDRESS_TEXT, MAPS_LINK, getWhatsAppLink } from '../data';
 import logoImg from '../assets/images/brambatti_logo_footer.png';
 
 export default function Footer() {
@@ -25,7 +25,10 @@ export default function Footer() {
               <img
                 src={logoImg}
                 alt="Brambatti Distribuidora"
-                referrerPolicy="no-referrer"
+                width="601"
+                height="600"
+                loading="lazy"
+                decoding="async"
                 className="h-[44px] md:h-[54px] w-auto object-contain block brightness-0 invert opacity-90 group-hover:opacity-100 transition-opacity duration-300"
               />
             </a>

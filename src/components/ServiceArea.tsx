@@ -66,7 +66,7 @@ export default function ServiceArea() {
 
             <div className="mt-6 border-l-2 border-[#851A21] pl-4">
               <p className="font-sans text-sm leading-6 text-[#F5E9DD]/90">
-                Somente as áreas destacadas em vermelho no mapa ficam fora da nossa cobertura.
+                As regiões destacadas em vermelho fazem parte da área de atendimento de outro distribuidor oficial da Ecosmetics.
               </p>
             </div>
 
@@ -91,7 +91,7 @@ export default function ServiceArea() {
               <svg
                 viewBox="0 0 2048 1888"
                 role="img"
-                aria-label="Mapa do Rio Grande do Sul com as áreas não atendidas destacadas em vermelho"
+                aria-label="Mapa do Rio Grande do Sul com as áreas atendidas por outro distribuidor oficial destacadas em vermelho"
                 className="mx-auto block h-auto w-full max-w-[700px]"
               >
                 <path
@@ -116,7 +116,7 @@ export default function ServiceArea() {
               <div className="mt-4 flex items-center gap-3 border-t border-black/10 pt-4">
                 <span className="h-3 w-3 rounded-sm bg-[#851A21]" />
                 <span className="font-sans text-[10px] font-bold uppercase tracking-[0.12em] text-[#6E6A66]">
-                  Áreas em vermelho: regiões sem atendimento
+                  Áreas em vermelho: atendimento de outro distribuidor oficial
                 </span>
               </div>
             </div>
