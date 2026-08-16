@@ -126,11 +126,26 @@ export default function Footer() {
 
         {/* Bottom copyright segment */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-6 text-xs text-[#F5E9DD]/55 text-center sm:text-left">
-          <p>
-            &copy; {new Date().getFullYear()} Brambatti Distribuidora. Todos os direitos reservados. <br className="sm:hidden" />
-            <span className="hidden sm:inline"> | </span> 
-            CNPJ sob consulta comercial.
-          </p>
+          <div className="flex flex-col gap-2">
+            <p>
+              &copy; {new Date().getFullYear()} Brambatti Distribuidora. Todos os direitos reservados. <br className="sm:hidden" />
+              <span className="hidden sm:inline"> | </span>
+              CNPJ sob consulta comercial.
+            </p>
+
+            <p className="text-[10px] text-[#F5E9DD]/45">
+              Site desenvolvido pela{' '}
+              <a
+                href="https://linkanext.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-bold text-[#D4BCAE] hover:text-white transition-colors"
+              >
+                Linka Digital
+              </a>
+              .
+            </p>
+          </div>
 
           <button
             onClick={scrollToTop}
