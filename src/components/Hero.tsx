@@ -57,7 +57,7 @@ export default function Hero() {
             transition={{ duration: 0.8, ease: 'easeOut' }}
             className="font-sans text-[9px] lg:text-[10px] tracking-[0.18em] uppercase text-[#F5E9DD]/90 font-semibold mb-4 lg:mb-6 block drop-shadow-[0_2px_6px_rgba(0,0,0,0.75)]"
           >
-            DISTRIBUIDORA OFICIAL ECOSMETICS NO RS
+            DISTRIBUIDORA OFICIAL PARA PROFISSIONAIS DA BELEZA
           </motion.span>
 
           {/* Título principal */}
@@ -68,12 +68,21 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.1, ease: 'easeOut' }}
             className="font-serif font-light text-white text-[36px] lg:text-[56px] leading-[1.0] mb-5 lg:mb-[28px] tracking-tight max-w-[320px] lg:max-w-none drop-shadow-[0_3px_10px_rgba(0,0,0,0.8)]"
           >
-            Feito para{' '}
+            Distribuidora{' '}
             <span className="italic font-normal text-[#D4BCAE] drop-shadow-[0_2px_14px_rgba(212,188,174,0.28)]">
-              profissionais
+              Ecosmetics
             </span>{' '}
-            <br className="hidden lg:block" /> que querem crescer.
+            <br className="hidden lg:block" /> no Rio Grande do Sul
           </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
+            className="mb-5 max-w-[330px] font-sans text-[13px] leading-relaxed text-[#F5E9DD]/90 drop-shadow-[0_2px_6px_rgba(0,0,0,0.75)] lg:mb-6 lg:max-w-[470px] lg:text-[15px]"
+          >
+            Produtos profissionais, suporte técnico e atendimento direto a salões e cabeleireiros em Porto Alegre e outras regiões do RS.
+          </motion.p>
 
           {/* Botões de Ação */}
           <motion.div
