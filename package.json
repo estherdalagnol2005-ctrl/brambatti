@@ -4,10 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "generate:favicon": "node scripts/generate-favicon.mjs",
-    "predev": "npm run generate:favicon",
     "dev": "vite --port=3000 --host=0.0.0.0",
-    "prebuild": "npm run generate:favicon",
     "build": "vite build",
     "preview": "vite preview",
     "clean": "rm -rf dist server.js",
